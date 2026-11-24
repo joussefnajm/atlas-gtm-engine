@@ -57,3 +57,16 @@ The engine is workspace-based. The demo workspace is Force Energy (solar and sto
 ## 8. Known gaps
 
 Live search and enrichment need keys; senders are not connected; Neo4j is not used; Nexla and Teamily adapters are planned; replies are sandboxed.
+
+## 9. Roadmap: from approval to automation, with guardrails
+
+The goal is a fully automated loop. Automation is earned step by step, never switched on by default:
+
+| Level | What runs alone | Condition to unlock |
+|---|---|---|
+| L0 (today) | Discovery, scoring, drafting, review, queueing | None. Every message needs a human yes. |
+| L1 | Follow-up touches 2 and 3 for messages already approved at touch 1 | At least 30 approvals with zero reviewer flags and zero opt-outs |
+| L2 | First touch for tier A accounts using an approved template | Template approved once by the founder; sampling audit of 10% by a person |
+| L3 | Replies to common questions inside approved scripts; escalation to a person for anything else | Escalation rules tested; channel policies (Meta, CAN-SPAM, Ley 1581) checked by legal |
+
+Always on: a kill switch per channel, a daily send cap, opt-out handling, the reviewer and security checks, the audit log, and credit gating. Any flag drops the account back to L0. Live signals (search, enrichment) refresh the graph on a schedule, and the WhatsApp agent keeps the daily numbered queue for whatever is not yet automated.
