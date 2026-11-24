@@ -1,0 +1,2326 @@
+{
+ "meta": {
+  "customer": "Najm Ecosystem",
+  "note": "Evidence comes from public pages collected between 2026-11-17 and 2026-11-24 and from the Tinto Digital prospect research. Names of private individuals and of the pilot restaurant are not included. Anything marked sandbox is simulated."
+ },
+ "workspaces": [
+  {
+   "id": "tinto-wallet",
+   "label": "Tinto Digital · Restaurants",
+   "product": {
+    "id": "tinto-wallet",
+    "name": "Tinto Digital · Wallet loyalty + WhatsApp assistant",
+    "intake": "Tinto Digital builds custom software and marketing for independent Latin American restaurants in the Bay Area. Core offer: a loyalty card that lives in Apple and Google Wallet (QR sign-up, no app), a WhatsApp assistant that answers customers and captures consented contacts, and a funnel with weekly KPIs. Piloted with one arepa restaurant in San José. Software is custom software owned by Tinto and licensed to the client. Third-party costs such as ads are paid by the client.",
+    "lines": [
+     "Wallet loyalty card",
+     "WhatsApp assistant",
+     "Funnel and KPIs",
+     "Marketing plans"
+    ]
+   },
+   "icp": {
+    "productId": "tinto-wallet",
+    "inferredFrom": [
+     "Tinto Digital wallet market study (2026-11-17)",
+     "pilot restaurant diagnostic",
+     "public prospect list (2026-11-23)"
+    ],
+    "fields": [
+     {
+      "key": "industries",
+      "label": "Target industries",
+      "value": [
+       "Independent Latin American restaurants",
+       "Bakeries and cafes with repeat customers"
+      ],
+      "confidence": 0.88,
+      "why": "Repeat visits are the core of loyalty value; the pilot is an arepa restaurant.",
+      "naics": [
+       "722511",
+       "722515",
+       "311811"
+      ]
+     },
+     {
+      "key": "size",
+      "label": "Company size",
+      "value": "1 to 3 locations, owner-operated, daily sales of about US$1,000 to 2,500 (pilot data point)",
+      "confidence": 0.7,
+      "why": "Chains buy enterprise tools; owners decide fast."
+     },
+     {
+      "key": "personas",
+      "label": "Buyer personas",
+      "value": [
+       "Owner",
+       "Manager"
+      ],
+      "confidence": 0.85,
+      "why": "One decision maker, often reachable on Instagram or WhatsApp."
+     },
+     {
+      "key": "triggers",
+      "label": "Trigger events",
+      "value": [
+       "No own website or ordering page",
+       "Few reviews",
+       "No visible loyalty program",
+       "New press coverage",
+       "Heavy delivery-app dependence"
+      ],
+      "confidence": 0.8,
+      "why": "Observed in public listings; each is a reason to talk."
+     },
+     {
+      "key": "geo",
+      "label": "Geography",
+      "value": "San José and the South Bay first, then the rest of the Bay Area",
+      "confidence": 0.9,
+      "why": "The founders and the pilot are there."
+     },
+     {
+      "key": "negatives",
+      "label": "Negative signals",
+      "value": [
+       "Chain or franchise",
+       "Agency already managing social media",
+       "Closed or relocated"
+      ],
+      "confidence": 0.72,
+      "why": "Avoids wasted outreach and conflicts."
+     }
+    ],
+    "expansion": [
+     {
+      "id": "x1",
+      "segment": "Event and catering buyers (chambers, churches, dance schools)",
+      "evidence": "37 organizations with dated events were found for the pilot restaurant.",
+      "confidence": 0.8,
+      "status": "suggested"
+     },
+     {
+      "id": "x2",
+      "segment": "Latin bakeries and cafes with Instagram-first sales",
+      "evidence": "Several listed businesses sell mainly through Instagram and delivery apps.",
+      "confidence": 0.7,
+      "status": "suggested"
+     },
+     {
+      "id": "x3",
+      "segment": "Consultant wallet card for sales networks",
+      "evidence": "The same pass technology can carry a consultant QR for the Force Energy network.",
+      "confidence": 0.66,
+      "status": "suggested"
+     }
+    ]
+   },
+   "competitors": [
+    {
+     "id": "t1",
+     "name": "Loopy Loyalty",
+     "type": "direct",
+     "url": null,
+     "positioning": "Wallet-first loyalty for small business; Apple and Google passes, stamp app.",
+     "pricing": "US$25 / 69 / 95 per month (provider page, Tinto study 2026-11-17)"
+    },
+    {
+     "id": "t2",
+     "name": "PassKit",
+     "type": "direct",
+     "url": "https://passkit.com",
+     "positioning": "Wallet pass platform with API and automation; requires own Apple certificate.",
+     "pricing": "From about US$39.50 per month, scales with cards (third-party sources)"
+    },
+    {
+     "id": "t3",
+     "name": "Stamp Me",
+     "type": "direct",
+     "url": null,
+     "positioning": "Digital stamp cards for small shops.",
+     "pricing": "US$49 / 79 / 199 (sources conflict)"
+    },
+    {
+     "id": "t4",
+     "name": "Square Loyalty",
+     "type": "alternative",
+     "url": null,
+     "positioning": "Loyalty inside the Square POS, with Apple Wallet pass.",
+     "pricing": "About US$45 per month per location (third-party)"
+    },
+    {
+     "id": "t5",
+     "name": "Toast Loyalty",
+     "type": "alternative",
+     "url": null,
+     "positioning": "Loyalty module inside the Toast POS.",
+     "pricing": "Quote-based (one source cites about US$185 per month in a bundle)"
+    },
+    {
+     "id": "t6",
+     "name": "Thanx / Punchh (PAR)",
+     "type": "indirect",
+     "url": null,
+     "positioning": "Enterprise loyalty for chains.",
+     "pricing": "Quote-based"
+    }
+   ],
+   "accounts": [
+    {
+     "id": "r1",
+     "name": "Milohas Pastries",
+     "city": "San Jose CA",
+     "region": "Bay Area, CA",
+     "inRegion": true,
+     "industry": "Restaurant / cafe (Latin American)",
+     "industryFit": 1.0,
+     "size": "Panadería colombiana (empanadas)",
+     "domain": null,
+     "currentVendor": null,
+     "verification": "A",
+     "signals": [
+      {
+       "id": "sr1",
+       "type": "observed_pain",
+       "text": "Sin sitio web en la fuente; lunes cerrado; delivery apps no mencionadas",
+       "date": "2026-11-23",
+       "url": "https://sanjosespotlight.com/the-biz-beat-milohas-pastries-in-san-jose-makes-divine-empanadas/",
+       "strength": 0.85
+      }
+     ],
+     "angle": "Digital wallet loyalty card plus a WhatsApp assistant that answers and captures repeat customers. Dueños de Colombia según la nota; clientela latina y local",
+     "roles": [
+      "Owner",
+      "Manager"
+     ],
+     "instagram": "instagram.com/milohaspastries"
+    },
+    {
+     "id": "r2",
+     "name": "Arepas Latin Cuisine (Willow Glen)",
+     "city": "San Jose CA",
+     "region": "Bay Area, CA",
+     "inRegion": true,
+     "industry": "Restaurant / cafe (Latin American)",
+     "industryFit": 1.0,
+     "size": "Venezolana (arepas)",
+     "domain": "arepasinc.com",
+     "currentVendor": "Toast",
+     "verification": "A",
+     "signals": [
+      {
+       "id": "sr2",
+       "type": "observed_pain",
+       "text": "Pedidos por Toast; delivery apps no mencionadas en la nota",
+       "date": "2026-11-23",
+       "url": "https://sanjosespotlight.com/the-biz-beat-san-jose-restaurant-arepas-unlocks-beauty-and-depth-of-venezuelan-cuisine",
+       "strength": 0.85
+      }
+     ],
+     "angle": "Digital wallet loyalty card plus a WhatsApp assistant that answers and captures repeat customers. Dueña de Venezuela según la nota; cocina de arepas afín a Tinto",
+     "roles": [
+      "Owner",
+      "Manager"
+     ],
+     "instagram": "instagram.com/arepas_sanjose"
+    },
+    {
+     "id": "r3",
+     "name": "El Bumangues",
+     "city": "San Jose CA",
+     "region": "Bay Area, CA",
+     "inRegion": true,
+     "industry": "Restaurant / cafe (Latin American)",
+     "industryFit": 1.0,
+     "size": "Colombiana (hamburguesas / comida de calle)",
+     "domain": "elbumanguesca.com",
+     "currentVendor": null,
+     "verification": "B",
+     "signals": [
+      {
+       "id": "sr3",
+       "type": "observed_pain",
+       "text": "Horario solo noche (6 pm a 11:30 pm entre semana según listado); sin tarjeta de lealtad visible [POR VERIFICAR]",
+       "date": "2026-11-23",
+       "url": "https://www.restaurantji.com/ca/san-jose/el-bumangues-/",
+       "strength": 0.62
+      }
+     ],
+     "angle": "Digital wallet loyalty card plus a WhatsApp assistant that answers and captures repeat customers. Cocina colombiana con buena calificación y reseñas; abre en la noche",
+     "roles": [
+      "Owner",
+      "Manager"
+     ],
+     "instagram": "instagram.com/elbumangues_"
+    },
+    {
+     "id": "r4",
+     "name": "Fonda Colombiana (S White Rd)",
+     "city": "San Jose CA",
+     "region": "Bay Area, CA",
+     "inRegion": true,
+     "industry": "Restaurant / cafe (Latin American)",
+     "industryFit": 1.0,
+     "size": "Colombiana (bandeja paisa; sancocho; ajiaco)",
+     "domain": "[propio no confirmado; lafondacolombianasanjose.com figura en un directorio: POR VERIFICAR]",
+     "currentVendor": null,
+     "verification": "B",
+     "signals": [
+      {
+       "id": "sr4",
+       "type": "observed_pain",
+       "text": "Solo página de pedidos de la plataforma SpotOn; sin web ni redes propias confirmadas",
+       "date": "2026-11-23",
+       "url": "https://order.spoton.com/so-fonda-colombiana-23377/san-jose-ca/67f703130ea5378766a115b9",
+       "strength": 0.62
+      }
+     ],
+     "angle": "Digital wallet loyalty card plus a WhatsApp assistant that answers and captures repeat customers. Restaurante colombiano establecido con dos locales (el 2.º en Snell Ave)",
+     "roles": [
+      "Owner",
+      "Manager"
+     ],
+     "instagram": "[no encontrado]"
+    },
+    {
+     "id": "r5",
+     "name": "Medallo Restaurant",
+     "city": "San Jose CA",
+     "region": "Bay Area, CA",
+     "inRegion": true,
+     "industry": "Restaurant / cafe (Latin American)",
+     "industryFit": 1.0,
+     "size": "Colombiana (bar y restaurante)",
+     "domain": "medallorestaurantllc.com",
+     "currentVendor": null,
+     "verification": "B",
+     "signals": [
+      {
+       "id": "sr5",
+       "type": "observed_pain",
+       "text": "Calificación baja y pocas reseñas; sin delivery/pedidos en línea en el listado",
+       "date": "2026-11-23",
+       "url": "https://www.restaurantji.com/ca/san-jose/medallo-restaurant-llc-/",
+       "strength": 0.62
+      }
+     ],
+     "angle": "Digital wallet loyalty card plus a WhatsApp assistant that answers and captures repeat customers. Colombiano con web y Instagram propios",
+     "roles": [
+      "Owner",
+      "Manager"
+     ],
+     "instagram": "instagram.com/medallo_restaurantbar"
+    },
+    {
+     "id": "r6",
+     "name": "El Perri Latin Food",
+     "city": "San Jose CA",
+     "region": "Bay Area, CA",
+     "inRegion": true,
+     "industry": "Restaurant / cafe (Latin American)",
+     "industryFit": 1.0,
+     "size": "Colombiana (comida rápida)",
+     "domain": null,
+     "currentVendor": null,
+     "verification": "B",
+     "signals": [
+      {
+       "id": "sr6",
+       "type": "observed_pain",
+       "text": "Sin sitio web ni pedidos en línea en el listado; pocas reseñas",
+       "date": "2026-11-23",
+       "url": "https://www.restaurantji.com/ca/san-jose/el-perri-latin-food-/",
+       "strength": 0.62
+      }
+     ],
+     "angle": "Digital wallet loyalty card plus a WhatsApp assistant that answers and captures repeat customers. Comida colombiana con buena nota; abre 12 pm a 11 pm",
+     "roles": [
+      "Owner",
+      "Manager"
+     ],
+     "instagram": "Instagram [handle POR VERIFICAR]"
+    },
+    {
+     "id": "r7",
+     "name": "Empanada House",
+     "city": "San Jose CA",
+     "region": "Bay Area, CA",
+     "inRegion": true,
+     "industry": "Restaurant / cafe (Latin American)",
+     "industryFit": 1.0,
+     "size": "Colombiana (empanadas)",
+     "domain": null,
+     "currentVendor": null,
+     "verification": "B",
+     "signals": [
+      {
+       "id": "sr7",
+       "type": "observed_pain",
+       "text": "Sin sitio web ni pedidos en línea en el listado; muy pocas reseñas",
+       "date": "2026-11-23",
+       "url": "https://www.restaurantji.com/ca/san-jose/empanada-house-/",
+       "strength": 0.62
+      }
+     ],
+     "angle": "Digital wallet loyalty card plus a WhatsApp assistant that answers and captures repeat customers. Negocio colombiano pequeño con Instagram activo [POR VERIFICAR]",
+     "roles": [
+      "Owner",
+      "Manager"
+     ],
+     "instagram": "instagram.com/empanada_house_sj"
+    },
+    {
+     "id": "r8",
+     "name": "La Bendición Colombiana",
+     "city": "Campbell CA",
+     "region": "Bay Area, CA",
+     "inRegion": true,
+     "industry": "Restaurant / cafe (Latin American)",
+     "industryFit": 1.0,
+     "size": "Colombiana (bar & grill)",
+     "domain": "labendicioncolombiana.com",
+     "currentVendor": null,
+     "verification": "B",
+     "signals": [
+      {
+       "id": "sr8",
+       "type": "observed_pain",
+       "text": "Calificación 3.3 con servicio 3.3; menú en español (oportunidad bilingüe)",
+       "date": "2026-11-23",
+       "url": "https://www.restaurantji.com/ca/campbell/la-bendici-n-/",
+       "strength": 0.62
+      }
+     ],
+     "angle": "Digital wallet loyalty card plus a WhatsApp assistant that answers and captures repeat customers. Colombiano con web e Instagram; abre desde las 8 am",
+     "roles": [
+      "Owner",
+      "Manager"
+     ],
+     "instagram": "instagram.com/labendicioncolombiana"
+    },
+    {
+     "id": "r9",
+     "name": "El Gran Tamal Colombiano",
+     "city": "San Jose CA",
+     "region": "Bay Area, CA",
+     "inRegion": true,
+     "industry": "Restaurant / cafe (Latin American)",
+     "industryFit": 1.0,
+     "size": "Colombiana (tamales; food truck)",
+     "domain": "elgrantamalcolombianoca.com",
+     "currentVendor": null,
+     "verification": "B",
+     "signals": [
+      {
+       "id": "sr9",
+       "type": "observed_pain",
+       "text": "Pocas reseñas; sin menú ni fotos en el listado; sin pedidos en línea",
+       "date": "2026-11-23",
+       "url": "https://www.restaurantji.com/ca/san-jose/el-gran-tamal-colombiano-/",
+       "strength": 0.62
+      }
+     ],
+     "angle": "Digital wallet loyalty card plus a WhatsApp assistant that answers and captures repeat customers. Food truck colombiano con web propia",
+     "roles": [
+      "Owner",
+      "Manager"
+     ],
+     "instagram": "Instagram [handle POR VERIFICAR]"
+    },
+    {
+     "id": "r10",
+     "name": "Sabor de las Arepas",
+     "city": "San Jose CA",
+     "region": "Bay Area, CA",
+     "inRegion": true,
+     "industry": "Restaurant / cafe (Latin American)",
+     "industryFit": 1.0,
+     "size": "Colombiana / mexicana",
+     "domain": null,
+     "currentVendor": null,
+     "verification": "B",
+     "signals": [
+      {
+       "id": "sr10",
+       "type": "observed_pain",
+       "text": "Sin sitio web propio en el listado; abre solo de 5 pm a 11:30 pm",
+       "date": "2026-11-23",
+       "url": "https://www.restaurantji.com/ca/san-jose/sabor-restaurant-/",
+       "strength": 0.62
+      }
+     ],
+     "angle": "Digital wallet loyalty card plus a WhatsApp assistant that answers and captures repeat customers. Colombiano con delivery y pedidos en línea",
+     "roles": [
+      "Owner",
+      "Manager"
+     ],
+     "instagram": "[no encontrado]"
+    },
+    {
+     "id": "r11",
+     "name": "La Callejera Colombian Food",
+     "city": "San Jose CA",
+     "region": "Bay Area, CA",
+     "inRegion": true,
+     "industry": "Restaurant / cafe (Latin American)",
+     "industryFit": 1.0,
+     "size": "Colombiana (desayuno y almuerzo)",
+     "domain": null,
+     "currentVendor": null,
+     "verification": "B",
+     "signals": [
+      {
+       "id": "sr11",
+       "type": "observed_pain",
+       "text": "Sin sitio web; estado actual (abierto/cerrado) POR VERIFICAR: un directorio lo muestra cerrado",
+       "date": "2026-11-23",
+       "url": "https://www.restaurantji.com/ca/san-jose/la-callejera-colombian-food-/",
+       "strength": 0.62
+      }
+     ],
+     "angle": "Digital wallet loyalty card plus a WhatsApp assistant that answers and captures repeat customers. Buena nota; Instagram propio; horario de día",
+     "roles": [
+      "Owner",
+      "Manager"
+     ],
+     "instagram": "instagram.com/lacallejera_cf"
+    },
+    {
+     "id": "r12",
+     "name": "Shaddai Guatemalan Cuisine",
+     "city": "San Jose CA",
+     "region": "Bay Area, CA",
+     "inRegion": true,
+     "industry": "Restaurant / cafe (Latin American)",
+     "industryFit": 1.0,
+     "size": "Guatemalteca (food truck)",
+     "domain": null,
+     "currentVendor": null,
+     "verification": "A",
+     "signals": [
+      {
+       "id": "sr12",
+       "type": "observed_pain",
+       "text": "Solo efectivo; sin sitio web; solo Instagram",
+       "date": "2026-11-23",
+       "url": "http://www.kqed.org/arts/13966121/guatemalan-food-truck-san-jose-shaddai",
+       "strength": 0.85
+      }
+     ],
+     "angle": "Digital wallet loyalty card plus a WhatsApp assistant that answers and captures repeat customers. Cocina latina con prensa local; clientela latina",
+     "roles": [
+      "Owner",
+      "Manager"
+     ],
+     "instagram": "instagram.com/shaddai.cuisine"
+    },
+    {
+     "id": "r13",
+     "name": "Habana Cuba Restaurant",
+     "city": "San Jose CA",
+     "region": "Bay Area, CA",
+     "inRegion": true,
+     "industry": "Restaurant / cafe (Latin American)",
+     "industryFit": 1.0,
+     "size": "Cubana",
+     "domain": "998cuba.com",
+     "currentVendor": null,
+     "verification": "A",
+     "signals": [
+      {
+       "id": "sr13",
+       "type": "observed_pain",
+       "text": "Horario limitado (lunes cerrado; cierra 7 pm algunos días); delivery apps no mencionadas; origen del dueño no indicado",
+       "date": "2026-11-23",
+       "url": "https://sanjosespotlight.com/the-biz-beat-authentic-cuban-food-hidden-in-san-joses-sofa-market/",
+       "strength": 0.85
+      }
+     ],
+     "angle": "Digital wallet loyalty card plus a WhatsApp assistant that answers and captures repeat customers. Cocina cubana; clientela latina; catering mencionado en la nota",
+     "roles": [
+      "Owner",
+      "Manager"
+     ],
+     "instagram": "instagram.com/habanacubarestaurant"
+    },
+    {
+     "id": "r14",
+     "name": "Cheff Che Cafe & Bar",
+     "city": "San Jose CA",
+     "region": "Bay Area, CA",
+     "inRegion": true,
+     "industry": "Restaurant / cafe (Latin American)",
+     "industryFit": 1.0,
+     "size": "Café mexicano-americano (empanadas; brunch)",
+     "domain": "cheffchecafe.com",
+     "currentVendor": null,
+     "verification": "A",
+     "signals": [
+      {
+       "id": "sr14",
+       "type": "observed_pain",
+       "text": "Abre solo 8 am a 3 pm; delivery apps no mencionadas",
+       "date": "2026-11-23",
+       "url": "http://www.kqed.org/arts/13953266/empanadas-mexican-san-jose-cheff-che-cafe",
+       "strength": 0.85
+      }
+     ],
+     "angle": "Digital wallet loyalty card plus a WhatsApp assistant that answers and captures repeat customers. Dueños de México según la nota; café con clientela latina",
+     "roles": [
+      "Owner",
+      "Manager"
+     ],
+     "instagram": "instagram.com/cheffchecafe"
+    },
+    {
+     "id": "r15",
+     "name": "Pink Elephant Bakery",
+     "city": "San Jose CA",
+     "region": "Bay Area, CA",
+     "inRegion": true,
+     "industry": "Restaurant / cafe (Latin American)",
+     "industryFit": 1.0,
+     "size": "Panadería mexicana (pan dulce; tortas)",
+     "domain": "thepinkelephantbakery.com",
+     "currentVendor": null,
+     "verification": "A",
+     "signals": [
+      {
+       "id": "sr15",
+       "type": "observed_pain",
+       "text": "Sin Instagram encontrado; pedidos por teléfono (según listado)",
+       "date": "2026-11-23",
+       "url": "https://www.sanjose.org/listings/pink-elephant-bakery",
+       "strength": 0.85
+      }
+     ],
+     "angle": "Digital wallet loyalty card plus a WhatsApp assistant that answers and captures repeat customers. Negocio familiar desde 1978; pedidos para cumpleaños y bodas",
+     "roles": [
+      "Owner",
+      "Manager"
+     ],
+     "instagram": "[no encontrado]"
+    },
+    {
+     "id": "r16",
+     "name": "Mexico Bakery",
+     "city": "San Jose CA",
+     "region": "Bay Area, CA",
+     "inRegion": true,
+     "industry": "Restaurant / cafe (Latin American)",
+     "industryFit": 1.0,
+     "size": "Panadería mexicana (3 locales)",
+     "domain": "mexicobakery.us",
+     "currentVendor": null,
+     "verification": "A",
+     "signals": [
+      {
+       "id": "sr16",
+       "type": "observed_pain",
+       "text": "Sin Instagram; un lector pide en comentarios DoorDash/Instacart (la nota no los menciona)",
+       "date": "2026-11-23",
+       "url": "https://sanjosespotlight.com/the-biz-beat-a-sweet-bounty-awaits-inside-familys-east-san-jose-mexico-bakery-alum-rock/",
+       "strength": 0.85
+      }
+     ],
+     "angle": "Digital wallet loyalty card plus a WhatsApp assistant that answers and captures repeat customers. Familia de México; 3 locales; mucha clientela latina",
+     "roles": [
+      "Owner",
+      "Manager"
+     ],
+     "instagram": "Facebook (facebook.com/Mexicobakery); sin Instagram en la nota"
+    },
+    {
+     "id": "r17",
+     "name": "Con Azúcar Café",
+     "city": "San Jose CA",
+     "region": "Bay Area, CA",
+     "inRegion": true,
+     "industry": "Restaurant / cafe (Latin American)",
+     "industryFit": 1.0,
+     "size": "Café con cultura mexicana (pan dulce; café de olla)",
+     "domain": "conazucarcafe.com",
+     "currentVendor": null,
+     "verification": "A",
+     "signals": [
+      {
+       "id": "sr17",
+       "type": "observed_pain",
+       "text": "Sitio sin horarios ni direcciones visibles al leerlo; sin delivery ni lealtad visibles [POR VERIFICAR]; origen de los dueños no confirmado",
+       "date": "2026-11-23",
+       "url": "https://sanjosespotlight.com/the-biz-beat-downtown-san-jose-con-azucar-cafe-serves-specialty-coffee-pan-dulce",
+       "strength": 0.85
+      }
+     ],
+     "angle": "Digital wallet loyalty card plus a WhatsApp assistant that answers and captures repeat customers. Café con marca latina y tienda en línea",
+     "roles": [
+      "Owner",
+      "Manager"
+     ],
+     "instagram": "instagram.com/conazucarcafe"
+    },
+    {
+     "id": "r18",
+     "name": "Emelina's Peruvian Restaurant",
+     "city": "Santa Clara CA",
+     "region": "Bay Area, CA",
+     "inRegion": true,
+     "industry": "Restaurant / cafe (Latin American)",
+     "industryFit": 1.0,
+     "size": "Peruana",
+     "domain": "[POR VERIFICAR]",
+     "currentVendor": null,
+     "verification": "C",
+     "signals": [
+      {
+       "id": "sr18",
+       "type": "observed_pain",
+       "text": "Un listado muestra el local como cerrado; posible cadena de 3 locales (puede ser grande); dueños POR VERIFICAR",
+       "date": "2026-11-23",
+       "url": "https://www.opentable.com/r/emelinas-peruvian-restaurant",
+       "strength": 0.4
+      }
+     ],
+     "angle": "Digital wallet loyalty card plus a WhatsApp assistant that answers and captures repeat customers. Cocina latina; local en Santa Clara abierto en 2023 según OpenTable",
+     "roles": [
+      "Owner",
+      "Manager"
+     ],
+     "instagram": "[POR VERIFICAR]"
+    },
+    {
+     "id": "r19",
+     "name": "Pedro's Restaurant & Cantina",
+     "city": "Santa Clara CA",
+     "region": "Bay Area, CA",
+     "inRegion": true,
+     "industry": "Restaurant / cafe (Latin American)",
+     "industryFit": 1.0,
+     "size": "Mexicana",
+     "domain": "[POR VERIFICAR]",
+     "currentVendor": null,
+     "verification": "B",
+     "signals": [
+      {
+       "id": "sr19",
+       "type": "observed_pain",
+       "text": "Sitio web no confirmado; puede ser grande y ya tener agencia [POR VERIFICAR]",
+       "date": "2026-11-23",
+       "url": "https://www.cbsnews.com/sanfrancisco/news/discover-santa-clara-pedros-restaurant",
+       "strength": 0.62
+      }
+     ],
+     "angle": "Digital wallet loyalty card plus a WhatsApp assistant that answers and captures repeat customers. Negocio familiar desde 1980 según CBS; dueña mujer; clientela latina probable",
+     "roles": [
+      "Owner",
+      "Manager"
+     ],
+     "instagram": "[POR VERIFICAR]"
+    },
+    {
+     "id": "r20",
+     "name": "El Sabor de Mercedes",
+     "city": "Sunnyvale CA",
+     "region": "Bay Area, CA",
+     "inRegion": true,
+     "industry": "Restaurant / cafe (Latin American)",
+     "industryFit": 1.0,
+     "size": "Salvadoreña y mexicana",
+     "domain": "[POR VERIFICAR]",
+     "currentVendor": null,
+     "verification": " ",
+     "signals": [
+      {
+       "id": "sr20",
+       "type": "observed_pain",
+       "text": "Todo POR VERIFICAR: estado",
+       "date": "https://startpage.mapquest.com/us/california/el-sabor-de-mercedes-643563109",
+       "url": "C (solo resultado de búsqueda)",
+       "strength": 0.4
+      }
+     ],
+     "angle": "Digital wallet loyalty card plus a WhatsApp assistant that answers and captures repeat customers. Cocina salvadoreña en Sunnyvale (195 E Maude Ave según listado)",
+     "roles": [
+      "Owner",
+      "Manager"
+     ],
+     "instagram": "[POR VERIFICAR]"
+    }
+   ],
+   "marketSignals": [],
+   "homeRegion": "Bay Area, CA"
+  },
+  {
+   "id": "tinto-catering",
+   "label": "Tinto Digital · Catering",
+   "product": {
+    "id": "tinto-catering",
+    "name": "Tinto Digital · Catering and events engine",
+    "intake": "Pilot restaurant catering and corporate events program: combo trays, event quotes through a public 'quote your event' page, and outreach to chambers, churches, dance schools, coworkings and community organizations around San José that have dated events.",
+    "lines": [
+     "Event quote page",
+     "Outreach to organizations",
+     "Combo catalog"
+    ]
+   },
+   "icp": {
+    "productId": "tinto-catering",
+    "inferredFrom": [
+     "pilot restaurant catering strategy",
+     "37-organization public list (2026-11-22)"
+    ],
+    "fields": [
+     {
+      "key": "industries",
+      "label": "Target industries",
+      "value": [
+       "Hispanic chambers",
+       "Community nonprofits",
+       "Churches",
+       "Event organizers",
+       "Coworkings",
+       "Latin dance schools",
+       "Universities"
+      ],
+      "confidence": 0.8,
+      "why": "They run recurring events that need food.",
+      "naics": [
+       "813910",
+       "813110",
+       "711310",
+       "531190",
+       "611610"
+      ]
+     },
+     {
+      "key": "size",
+      "label": "Company size",
+      "value": "Events from 30 to 300 guests",
+      "confidence": 0.65,
+      "why": "Fits combo trays and a small kitchen."
+     },
+     {
+      "key": "personas",
+      "label": "Buyer personas",
+      "value": [
+       "Events coordinator",
+       "Executive director"
+      ],
+      "confidence": 0.78,
+      "why": "They book vendors for galas, mixers and holidays."
+     },
+     {
+      "key": "triggers",
+      "label": "Trigger events",
+      "value": [
+       "A dated event in the next 6 weeks",
+       "Holiday posadas",
+       "Annual gala or mixer"
+      ],
+      "confidence": 0.86,
+      "why": "Dates are public and give a real buying window."
+     },
+     {
+      "key": "geo",
+      "label": "Geography",
+      "value": "San José, Santa Clara, Silicon Valley",
+      "confidence": 0.9,
+      "why": "Delivery radius of the kitchen."
+     },
+     {
+      "key": "negatives",
+      "label": "Negative signals",
+      "value": [
+       "Exclusive catering contract",
+       "No public contact",
+       "Event already passed"
+      ],
+      "confidence": 0.7,
+      "why": "Skip what cannot convert."
+     }
+    ],
+    "expansion": [
+     {
+      "id": "x1",
+      "segment": "Corporate holiday parties in Silicon Valley",
+      "evidence": "Coworkings host monthly events with food.",
+      "confidence": 0.6,
+      "status": "suggested"
+     }
+    ]
+   },
+   "competitors": [],
+   "accounts": [
+    {
+     "id": "o1",
+     "name": "Hispanic Chamber of Commerce Silicon Valley",
+     "city": "San José",
+     "region": "Bay Area, CA",
+     "inRegion": true,
+     "industry": "Cámara hispana",
+     "industryFit": 1.0,
+     "size": "Organization",
+     "domain": "https://hispanicchamberofcommercesv.somee.com/",
+     "currentVendor": null,
+     "verification": "A",
+     "signals": [
+      {
+       "id": "so1",
+       "type": "upcoming_event",
+       "text": "Gala anual vie 4/12/2026, 6 p. m.–12 a. m., Friendship Banquet Hall (1121 E Santa Clara St). Mixer de noviembre: mar 24/11/2026",
+       "date": "2026-11-22",
+       "url": "https://www.eventbrite.com/e/hispanic-chamber-of-commerce-silicon-valley-annual-gala-2026-tickets-1999430571663",
+       "strength": 0.85
+      }
+     ],
+     "angle": "Hace mixers y galas con comida; su membresía ofrece visibilidad y patrocinios; público de empresarios hispanos",
+     "roles": [
+      "Events coordinator",
+      "Executive director"
+     ]
+    },
+    {
+     "id": "o2",
+     "name": "Latino Business Foundation Silicon Valley (LBFSV)",
+     "city": "San José",
+     "region": "Bay Area, CA",
+     "inRegion": true,
+     "industry": "ONG de desarrollo económico latino",
+     "industryFit": 1.0,
+     "size": "Organization",
+     "domain": "https://www.lbfsv.org/",
+     "currentVendor": null,
+     "verification": "A",
+     "signals": [
+      {
+       "id": "so2",
+       "type": "upcoming_event",
+       "text": "No encontré evento con fecha para dic. 2026",
+       "date": "2026-11-22",
+       "url": "https://www.lbfsv.org/",
+       "strength": 0.85
+      }
+     ],
+     "angle": "Sirve a emprendedores latinos (80% hispanohablantes según su sitio); programas con graduaciones y eventos comunitarios que suelen llevar comida",
+     "roles": [
+      "Events coordinator",
+      "Executive director"
+     ]
+    },
+    {
+     "id": "o3",
+     "name": "Latina Coalition of Silicon Valley (LCSV)",
+     "city": "Silicon Valley",
+     "region": "Bay Area, CA",
+     "inRegion": true,
+     "industry": "Asociación de mujeres latinas",
+     "industryFit": 1.0,
+     "size": "Organization",
+     "domain": "https://www.latinacoalition.org/",
+     "currentVendor": null,
+     "verification": "A",
+     "signals": [
+      {
+       "id": "so3",
+       "type": "upcoming_event",
+       "text": "16.º Brunch Anual: dom 22/11/2026 (ya ocurre hoy; sirve para 2027). Foro de liderazgo oct.–nov. 2026",
+       "date": "2026-11-22",
+       "url": "https://www.latinacoalition.org/events",
+       "strength": 0.85
+      }
+     ],
+     "angle": "Organiza brunch anual, talleres y foros; público latino y de negocios",
+     "roles": [
+      "Events coordinator",
+      "Executive director"
+     ]
+    },
+    {
+     "id": "o4",
+     "name": "Latinas Contra Cancer",
+     "city": "San José",
+     "region": "Bay Area, CA",
+     "inRegion": true,
+     "industry": "ONG de salud comunitaria latina",
+     "industryFit": 1.0,
+     "size": "Organization",
+     "domain": "https://www.latinascontracancer.org/",
+     "currentVendor": null,
+     "verification": "A",
+     "signals": [
+      {
+       "id": "so4",
+       "type": "upcoming_event",
+       "text": "No encontré fecha para dic. 2026",
+       "date": "2026-11-22",
+       "url": "https://www.latinascontracancer.org/",
+       "strength": 0.85
+      }
+     ],
+     "angle": "Organización latina con eventos y colaboraciones locales; sede en el centro de San José (25 N 14th St, Suite 900)",
+     "roles": [
+      "Events coordinator",
+      "Executive director"
+     ]
+    },
+    {
+     "id": "o5",
+     "name": "Hispanic Foundation of Silicon Valley",
+     "city": "San José",
+     "region": "Bay Area, CA",
+     "inRegion": true,
+     "industry": "Fundación hispana",
+     "industryFit": 0.7,
+     "size": "Organization",
+     "domain": "https://www.hfsv.org/",
+     "currentVendor": null,
+     "verification": "M",
+     "signals": [
+      {
+       "id": "so5",
+       "type": "upcoming_event",
+       "text": "Fecha del Ball 2026 no confirmada (en 2022 fue el 15/10)",
+       "date": "2026-11-22",
+       "url": "https://www.hfsv.org/things-to-know-before-the-ball/",
+       "strength": 0.62
+      }
+     ],
+     "angle": "Hace una gala anual (Hispanic Foundation Ball) con cena y subasta; comunidad hispana y tecnológica",
+     "roles": [
+      "Events coordinator",
+      "Executive director"
+     ]
+    },
+    {
+     "id": "o6",
+     "name": "SOMOS Mayfair",
+     "city": "San José",
+     "region": "Bay Area, CA",
+     "inRegion": true,
+     "industry": "ONG comunitaria (Mayfair, este de San José)",
+     "industryFit": 1.0,
+     "size": "Organization",
+     "domain": "https://www.somosmayfair.org/",
+     "currentVendor": null,
+     "verification": "A",
+     "signals": [
+      {
+       "id": "so6",
+       "type": "upcoming_event",
+       "text": "No encontré fecha para dic. 2026",
+       "date": "2026-11-22",
+       "url": "https://www.somosmayfair.org/",
+       "strength": 0.85
+      }
+     ],
+     "angle": "Organiza familias y líderes latinos, celebraciones comunitarias y reuniones; barrio de mayoría latina cerca de Alum Rock",
+     "roles": [
+      "Events coordinator",
+      "Executive director"
+     ]
+    },
+    {
+     "id": "o7",
+     "name": "Mexican Heritage Plaza (School of Arts & Culture)",
+     "city": "San José",
+     "region": "Bay Area, CA",
+     "inRegion": true,
+     "industry": "Centro cultural latino con alquiler de salones",
+     "industryFit": 0.7,
+     "size": "Organization",
+     "domain": "https://mhplaza.org/",
+     "currentVendor": null,
+     "verification": "A",
+     "signals": [
+      {
+       "id": "so7",
+       "type": "upcoming_event",
+       "text": "Mercadito: 25/11 y 9/12/2026; Fiesta Navideña: 12/12/2026 según su sitio (una publicación de Facebook dice 13/12, 3–6 p. m.: confirmar)",
+       "date": "2026-11-22",
+       "url": "https://mhplaza.org/",
+       "strength": 0.85
+      }
+     ],
+     "angle": "Alquila espacios para bodas, familias y festivales; cultura latina; festivales con vendedores",
+     "roles": [
+      "Events coordinator",
+      "Executive director"
+     ]
+    },
+    {
+     "id": "o8",
+     "name": "MACLA (Movimiento de Arte y Cultura Latino Americana)",
+     "city": "San José",
+     "region": "Bay Area, CA",
+     "inRegion": true,
+     "industry": "Centro de arte latino con alquiler de salones",
+     "industryFit": 0.7,
+     "size": "Organization",
+     "domain": "https://maclaarte.org/",
+     "currentVendor": null,
+     "verification": "A",
+     "signals": [
+      {
+       "id": "so8",
+       "type": "upcoming_event",
+       "text": "South First Fridays (primer viernes de cada mes; el 4/12/2026 es primer viernes: confirmar programación)",
+       "date": "2026-11-22",
+       "url": "https://maclaarte.org/rentals/",
+       "strength": 0.85
+      }
+     ],
+     "angle": "Alquila espacios para eventos privados; audiencia latina; South First Fridays (paseo de arte)",
+     "roles": [
+      "Events coordinator",
+      "Executive director"
+     ]
+    },
+    {
+     "id": "o9",
+     "name": "Consulado General de Colombia en San Francisco",
+     "city": "San Francisco",
+     "region": "Bay Area, CA",
+     "inRegion": true,
+     "industry": "Consulado (gobierno de Colombia)",
+     "industryFit": 0.7,
+     "size": "Organization",
+     "domain": "https://sanfrancisco.consulado.gov.co/",
+     "currentVendor": null,
+     "verification": "A",
+     "signals": [
+      {
+       "id": "so9",
+       "type": "upcoming_event",
+       "text": "Charla 'The State of the Art of AI in LATAM' jue 10/12/2026, 7 p. m. en el Consulado (con INPLUX; cupos limitados). Cierra 26–27/11 y no atiende pasaportes 25/11",
+       "date": "2026-11-22",
+       "url": "https://sanfrancisco.consulado.gov.co/",
+       "strength": 0.85
+      }
+     ],
+     "angle": "Es el consulado de la comunidad colombiana del Bay Area; hace eventos culturales y de comunidad; difunde por redes de colombianos",
+     "roles": [
+      "Events coordinator",
+      "Executive director"
+     ]
+    },
+    {
+     "id": "o10",
+     "name": "Consulado General de México en San José",
+     "city": "San José",
+     "region": "Bay Area, CA",
+     "inRegion": true,
+     "industry": "Consulado (gobierno de México)",
+     "industryFit": 0.7,
+     "size": "Organization",
+     "domain": "https://consulmex.sre.gob.mx/sanjose/index.php/inicio",
+     "currentVendor": null,
+     "verification": "M",
+     "signals": [
+      {
+       "id": "so10",
+       "type": "upcoming_event",
+       "text": "No encontré eventos de diciembre en su página",
+       "date": "2026-11-22",
+       "url": "https://consulmex.sre.gob.mx/sanjose/index.php/inicio",
+       "strength": 0.62
+      }
+     ],
+     "angle": "Atiende a la comunidad latina de Santa Clara y condados vecinos; eventos de comunidad; aparece como aliado en eventos latinos de universidades",
+     "roles": [
+      "Events coordinator",
+      "Executive director"
+     ]
+    },
+    {
+     "id": "o11",
+     "name": "Colombianos in the San Francisco Bay Area (grupo de Meetup)",
+     "city": "San Francisco Bay Area",
+     "region": "Bay Area, CA",
+     "inRegion": true,
+     "industry": "Grupo de comunidad colombiana",
+     "industryFit": 0.7,
+     "size": "Organization",
+     "domain": "https://www.meetup.com/colombians-in-the-san-francisco-bay-area/",
+     "currentVendor": null,
+     "verification": "A",
+     "signals": [
+      {
+       "id": "so11",
+       "type": "upcoming_event",
+       "text": "Últimos eventos visibles son de 2017–2018; actividad en 2026 sin confirmar",
+       "date": "2026-11-22",
+       "url": "https://www.meetup.com/colombians-in-the-san-francisco-bay-area/",
+       "strength": 0.85
+      }
+     ],
+     "angle": "Único grupo colombiano grande del Bay Area encontrado: 1.041 miembros; ofrece happy hours y fiestas",
+     "roles": [
+      "Events coordinator",
+      "Executive director"
+     ]
+    },
+    {
+     "id": "o12",
+     "name": "Festival Colombiano San José",
+     "city": "San José",
+     "region": "Bay Area, CA",
+     "inRegion": true,
+     "industry": "Evento/organización cultural colombiana",
+     "industryFit": 0.7,
+     "size": "Organization",
+     "domain": null,
+     "currentVendor": null,
+     "verification": "B",
+     "signals": [
+      {
+       "id": "so12",
+       "type": "upcoming_event",
+       "text": "Sin fecha confirmada",
+       "date": "2026-11-22",
+       "url": "https://m.yelp.com/biz/festival-colombiano-san-jose",
+       "strength": 0.62
+      }
+     ],
+     "angle": "Nombre sugiere festival de comida y cultura colombiana en San José",
+     "roles": [
+      "Events coordinator",
+      "Executive director"
+     ]
+    },
+    {
+     "id": "o13",
+     "name": "Cathedral Basilica of St. Joseph (Ministerio Hispano)",
+     "city": "San José",
+     "region": "Bay Area, CA",
+     "inRegion": true,
+     "industry": "Parroquia católica",
+     "industryFit": 0.7,
+     "size": "Organization",
+     "domain": "https://stjosephcathedral.org/ministerio-hispano",
+     "currentVendor": null,
+     "verification": "A",
+     "signals": [
+      {
+       "id": "so13",
+       "type": "upcoming_event",
+       "text": "8/12 Inmaculada Concepción; 12/12/2026 Virgen de Guadalupe (Mañanitas 5 a. m., misa 6 a. m., Serenata y Rosario 4 p. m., misa 7 p. m.)",
+       "date": "2026-11-22",
+       "url": "https://stjosephcathedral.org/ministerio-hispano",
+       "strength": 0.85
+      }
+     ],
+     "angle": "Comunidad hispana con misas en español (dom 10 a. m. y 1 p. m.); celebraciones con comida son habituales en la tradición",
+     "roles": [
+      "Events coordinator",
+      "Executive director"
+     ]
+    },
+    {
+     "id": "o14",
+     "name": "St. Francis of Assisi Parish (Ministerio Hispano)",
+     "city": "San José (zona este)",
+     "region": "Bay Area, CA",
+     "inRegion": true,
+     "industry": "Parroquia católica",
+     "industryFit": 0.7,
+     "size": "Organization",
+     "domain": "https://sfoasj.com/hispanic-ministry",
+     "currentVendor": null,
+     "verification": "A",
+     "signals": [
+      {
+       "id": "so14",
+       "type": "upcoming_event",
+       "text": "12/12/2026 Guadalupe (7:30 p. m., en español); posadas sin fechas publicadas",
+       "date": "2026-11-22",
+       "url": "https://sfoasj.com/hispanic-ministry",
+       "strength": 0.85
+      }
+     ],
+     "angle": "Su sitio dice que la comunidad hispana planea Día de Muertos, Guadalupe y posadas, y que tras la misa en español hay hospitalidad con comida cada domingo (fuera de Cuaresma)",
+     "roles": [
+      "Events coordinator",
+      "Executive director"
+     ]
+    },
+    {
+     "id": "o15",
+     "name": "Our Lady of Refuge Parish",
+     "city": "San José",
+     "region": "Bay Area, CA",
+     "inRegion": true,
+     "industry": "Parroquia católica",
+     "industryFit": 0.7,
+     "size": "Organization",
+     "domain": "https://www.ourladyofrefugesj.org/",
+     "currentVendor": null,
+     "verification": "M",
+     "signals": [
+      {
+       "id": "so15",
+       "type": "upcoming_event",
+       "text": "Sin fechas de dic. verificadas",
+       "date": "2026-11-22",
+       "url": "https://www.ourladyofrefugesj.org/",
+       "strength": 0.62
+      }
+     ],
+     "angle": "Misa en español (mediodía) publicada; posible comunidad hispana",
+     "roles": [
+      "Events coordinator",
+      "Executive director"
+     ]
+    },
+    {
+     "id": "o16",
+     "name": "Holy Cross Parish",
+     "city": "San José",
+     "region": "Bay Area, CA",
+     "inRegion": true,
+     "industry": "Parroquia católica",
+     "industryFit": 0.7,
+     "size": "Organization",
+     "domain": "https://holycrosssj.org/",
+     "currentVendor": null,
+     "verification": "M",
+     "signals": [
+      {
+       "id": "so16",
+       "type": "upcoming_event",
+       "text": "Sin fechas de dic. verificadas",
+       "date": "2026-11-22",
+       "url": "https://holycrosssj.org/",
+       "strength": 0.62
+      }
+     ],
+     "angle": "Misas en español (sáb. 11:30 a. m. y otras) según extracto",
+     "roles": [
+      "Events coordinator",
+      "Executive director"
+     ]
+    },
+    {
+     "id": "o17",
+     "name": "Iglesia Sobre La Roca",
+     "city": "San José",
+     "region": "Bay Area, CA",
+     "inRegion": true,
+     "industry": "Iglesia cristiana en español",
+     "industryFit": 1.0,
+     "size": "Organization",
+     "domain": "https://www.iglesiasobrelaroca.com/",
+     "currentVendor": null,
+     "verification": "A",
+     "signals": [
+      {
+       "id": "so17",
+       "type": "upcoming_event",
+       "text": "No hay eventos de diciembre en la página",
+       "date": "2026-11-22",
+       "url": "https://www.iglesiasobrelaroca.com/",
+       "strength": 0.85
+      }
+     ],
+     "angle": "Congregación en español (domingos 12 p. m.); posibles cenas o eventos de fin de año",
+     "roles": [
+      "Events coordinator",
+      "Executive director"
+     ]
+    },
+    {
+     "id": "o18",
+     "name": "Redemption Church (Redemption Español)",
+     "city": "San José",
+     "region": "Bay Area, CA",
+     "inRegion": true,
+     "industry": "Iglesia cristiana con ministerio en español",
+     "industryFit": 1.0,
+     "size": "Organization",
+     "domain": "https://www.myredemption.cc/espanol/",
+     "currentVendor": null,
+     "verification": "M",
+     "signals": [
+      {
+       "id": "so18",
+       "type": "upcoming_event",
+       "text": "Sin fechas de dic. verificadas",
+       "date": "2026-11-22",
+       "url": "https://www.myredemption.cc/espanol/",
+       "strength": 0.62
+      }
+     ],
+     "angle": "Ministerio dirigido a la comunidad de habla hispana",
+     "roles": [
+      "Events coordinator",
+      "Executive director"
+     ]
+    },
+    {
+     "id": "o19",
+     "name": "SJSU Chicanx/Latinx Student Success Center ('Centro')",
+     "city": "San José",
+     "region": "Bay Area, CA",
+     "inRegion": true,
+     "industry": "Universidad: centro estudiantil",
+     "industryFit": 1.0,
+     "size": "Organization",
+     "domain": "https://www.sjsu.edu/chicanxlatinxssc/",
+     "currentVendor": null,
+     "verification": "A",
+     "signals": [
+      {
+       "id": "so19",
+       "type": "upcoming_event",
+       "text": "Sin evento de dic. publicado en la portada; la celebración de fin de año es en primavera",
+       "date": "2026-11-22",
+       "url": "https://www.sjsu.edu/chicanxlatinxssc/",
+       "strength": 0.85
+      }
+     ],
+     "angle": "Centro con eventos y comunidad latina; celebración de fin de año (Chicano Commencement)",
+     "roles": [
+      "Events coordinator",
+      "Executive director"
+     ]
+    },
+    {
+     "id": "o20",
+     "name": "San José City College: Programas para estudiantes latinos (METAS, Puente, Sí Se Puede)",
+     "city": "San José",
+     "region": "Bay Area, CA",
+     "inRegion": true,
+     "industry": "Universidad/colegio comunitario",
+     "industryFit": 1.0,
+     "size": "Organization",
+     "domain": "https://sjcc.edu/about/hispanic-serving-institution.aspx",
+     "currentVendor": null,
+     "verification": "M",
+     "signals": [
+      {
+       "id": "so20",
+       "type": "upcoming_event",
+       "text": "Sin fechas de dic.",
+       "date": "2026-11-22",
+       "url": "https://sjcc.edu/about/hispanic-serving-institution.aspx",
+       "strength": 0.62
+      }
+     ],
+     "angle": "Institución sirve a estudiantes latinos; hace eventos de comunidad",
+     "roles": [
+      "Events coordinator",
+      "Executive director"
+     ]
+    },
+    {
+     "id": "o21",
+     "name": "Santa Clara University: Office for Campus Climate and Belonging / Latiné Student Union",
+     "city": "Santa Clara",
+     "region": "Bay Area, CA",
+     "inRegion": true,
+     "industry": "Universidad",
+     "industryFit": 1.0,
+     "size": "Organization",
+     "domain": "https://www.scu.edu/belonging/heritage-month-celebrations/hispaniclatinex/",
+     "currentVendor": null,
+     "verification": "M",
+     "signals": [
+      {
+       "id": "so21",
+       "type": "upcoming_event",
+       "text": "Heritage Month es sep–oct (ya pasó); no hay dato para dic.",
+       "date": "2026-11-22",
+       "url": "https://www.scu.edu/belonging/heritage-month-celebrations/hispaniclatinex/",
+       "strength": 0.62
+      }
+     ],
+     "angle": "Celebra Herencia Hispana y menciona un ERG latino y una Latiné Student Union",
+     "roles": [
+      "Events coordinator",
+      "Executive director"
+     ]
+    },
+    {
+     "id": "o22",
+     "name": "Evergreen Valley College",
+     "city": "San José",
+     "region": "Bay Area, CA",
+     "inRegion": true,
+     "industry": "Colegio comunitario",
+     "industryFit": 0.7,
+     "size": "Organization",
+     "domain": "https://www.evc.edu/",
+     "currentVendor": null,
+     "verification": "B",
+     "signals": [
+      {
+       "id": "so22",
+       "type": "upcoming_event",
+       "text": "Heritage Month en septiembre (ya pasó)",
+       "date": "2026-11-22",
+       "url": "https://www.instagram.com/p/DOl_-uoj4xd/",
+       "strength": 0.62
+      }
+     ],
+     "angle": "Hace eventos de Latinx Heritage Month y un programa de primer año enfocado en estudiantes latinos",
+     "roles": [
+      "Events coordinator",
+      "Executive director"
+     ]
+    },
+    {
+     "id": "o23",
+     "name": "San José Silicon Valley Chamber of Commerce",
+     "city": "San José",
+     "region": "Bay Area, CA",
+     "inRegion": true,
+     "industry": "Cámara de comercio",
+     "industryFit": 1.0,
+     "size": "Organization",
+     "domain": "https://web.sjchamber.com/",
+     "currentVendor": null,
+     "verification": "A",
+     "signals": [
+      {
+       "id": "so23",
+       "type": "upcoming_event",
+       "text": "Holiday Soirée (mixer de socios): mié 16/12/2026, 5:30–7:30 p. m. Café y conexiones 1/12; seminario 7/12",
+       "date": "2026-11-22",
+       "url": "https://web.sjchamber.com/events",
+       "strength": 0.85
+      }
+     ],
+     "angle": "Hace mixers para socios; red amplia de empresas locales (clientes de catering corporativo)",
+     "roles": [
+      "Events coordinator",
+      "Executive director"
+     ]
+    },
+    {
+     "id": "o24",
+     "name": "Silicon Valley Chamber of Commerce & Innovation (Silicon Valley Central Chamber)",
+     "city": "Santa Clara",
+     "region": "Bay Area, CA",
+     "inRegion": true,
+     "industry": "Cámara de comercio",
+     "industryFit": 1.0,
+     "size": "Organization",
+     "domain": "https://members.svcentralchamber.com/events",
+     "currentVendor": null,
+     "verification": "A",
+     "signals": [
+      {
+       "id": "so24",
+       "type": "upcoming_event",
+       "text": "Holiday Extravaganza: mié 2/12/2026, 6–9 p. m., Triton Museum of Art; Chamber Cheers Mixer: mié 16/12; SVBC los martes 1, 8 y 15/12",
+       "date": "2026-11-22",
+       "url": "https://members.svcentralchamber.com/events",
+       "strength": 0.85
+      }
+     ],
+     "angle": "Muchos mixers y eventos con comida en diciembre; red de empresas",
+     "roles": [
+      "Events coordinator",
+      "Executive director"
+     ]
+    },
+    {
+     "id": "o25",
+     "name": "Silicon Valley Latino Leadership Summit (SVLLS)",
+     "city": "Silicon Valley",
+     "region": "Bay Area, CA",
+     "inRegion": true,
+     "industry": "Cumbre de liderazgo latino",
+     "industryFit": 0.7,
+     "size": "Organization",
+     "domain": "https://www.svlls.com/",
+     "currentVendor": null,
+     "verification": "M",
+     "signals": [
+      {
+       "id": "so25",
+       "type": "upcoming_event",
+       "text": "Edición 2026 fue el 10/10/2026 (ya pasó); siguiente edición sin fecha",
+       "date": "2026-11-22",
+       "url": "https://www.svlls.com/",
+       "strength": 0.62
+      }
+     ],
+     "angle": "Cumbre anual con almuerzo y networking para latinos en negocios y tecnología",
+     "roles": [
+      "Events coordinator",
+      "Executive director"
+     ]
+    },
+    {
+     "id": "o26",
+     "name": "Silicon Valley Latino (medio y calendario de eventos)",
+     "city": "Silicon Valley",
+     "region": "Bay Area, CA",
+     "inRegion": true,
+     "industry": "Medio/calendario de la comunidad latina",
+     "industryFit": 0.7,
+     "size": "Organization",
+     "domain": "https://www.svlatino.com/blogs/events/",
+     "currentVendor": null,
+     "verification": "M",
+     "signals": [
+      {
+       "id": "so26",
+       "type": "upcoming_event",
+       "text": "Eventos listados: solo uno visible de noviembre (STEM 101, 8/11)",
+       "date": "2026-11-22",
+       "url": "https://www.svlatino.com/blogs/events/",
+       "strength": 0.62
+      }
+     ],
+     "angle": "Calendario donde se anuncian eventos latinos: sirve para encontrar organizadores y publicar",
+     "roles": [
+      "Events coordinator",
+      "Executive director"
+     ]
+    },
+    {
+     "id": "o27",
+     "name": "San José Downtown Association",
+     "city": "San José",
+     "region": "Bay Area, CA",
+     "inRegion": true,
+     "industry": "Asociación del centro de San José",
+     "industryFit": 1.0,
+     "size": "Organization",
+     "domain": "https://sjdowntown.com/",
+     "currentVendor": null,
+     "verification": "M",
+     "signals": [
+      {
+       "id": "so27",
+       "type": "upcoming_event",
+       "text": "Convocatoria para negocios del centro; fecha límite sin confirmar",
+       "date": "2026-11-22",
+       "url": "https://www.facebook.com/sjdowntown/posts/downtown-san-jose-businesses-get-holiday-ready-were-putting-together-our-holiday/1540372148136819/",
+       "strength": 0.62
+      }
+     ],
+     "angle": "Prepara guías de catering y lugares para fiestas de fin de año (Holiday Catering and Venue Guides) y busca negocios para incluir",
+     "roles": [
+      "Events coordinator",
+      "Executive director"
+     ]
+    },
+    {
+     "id": "o28",
+     "name": "Bay City Events, Inc.",
+     "city": "San José",
+     "region": "Bay Area, CA",
+     "inRegion": true,
+     "industry": "Organizador de eventos corporativos",
+     "industryFit": 1.0,
+     "size": "Organization",
+     "domain": "https://www.baycityevents.com/corporate-events.html",
+     "currentVendor": null,
+     "verification": "A",
+     "signals": [
+      {
+       "id": "so28",
+       "type": "upcoming_event",
+       "text": "Temporada de fiestas corporativas: sin fecha específica",
+       "date": "2026-11-22",
+       "url": "https://www.baycityevents.com/corporate-events.html",
+       "strength": 0.85
+      }
+     ],
+     "angle": "Planifica eventos corporativos y de empleados; trabaja con proveedores y ya ofrece catering propio",
+     "roles": [
+      "Events coordinator",
+      "Executive director"
+     ]
+    },
+    {
+     "id": "o29",
+     "name": "Trilogy Events",
+     "city": "San José",
+     "region": "Bay Area, CA",
+     "inRegion": true,
+     "industry": "Organizador de eventos",
+     "industryFit": 1.0,
+     "size": "Organization",
+     "domain": null,
+     "currentVendor": null,
+     "verification": "B",
+     "signals": [
+      {
+       "id": "so29",
+       "type": "upcoming_event",
+       "text": "",
+       "date": "2026-11-22",
+       "url": "https://m.yelp.com/search?cflt=eventplanning&find_loc=San+Jose%2C+CA",
+       "strength": 0.62
+      }
+     ],
+     "angle": "Aparece entre los mejores planificadores de San José en Yelp (nov. 2026)",
+     "roles": [
+      "Events coordinator",
+      "Executive director"
+     ]
+    },
+    {
+     "id": "o30",
+     "name": "Pacific Workplaces San José",
+     "city": "San José",
+     "region": "Bay Area, CA",
+     "inRegion": true,
+     "industry": "Coworking y oficinas",
+     "industryFit": 1.0,
+     "size": "Organization",
+     "domain": "https://pacificworkplaces.com/office-space/san-jose/",
+     "currentVendor": null,
+     "verification": "A",
+     "signals": [
+      {
+       "id": "so30",
+       "type": "upcoming_event",
+       "text": "Sin fecha: eventos mensuales para miembros",
+       "date": "2026-11-22",
+       "url": "https://pacificworkplaces.com/office-space/san-jose/",
+       "strength": 0.85
+      }
+     ],
+     "angle": "Su sitio y reseñas mencionan eventos mensuales con comida y postres para la comunidad; equipos de 5–50 personas",
+     "roles": [
+      "Events coordinator",
+      "Executive director"
+     ]
+    },
+    {
+     "id": "o31",
+     "name": "Spaces San José (IWG)",
+     "city": "San José",
+     "region": "Bay Area, CA",
+     "inRegion": true,
+     "industry": "Coworking",
+     "industryFit": 1.0,
+     "size": "Organization",
+     "domain": "https://www.spacesworks.com/en/us/san-jose",
+     "currentVendor": null,
+     "verification": "M",
+     "signals": [
+      {
+       "id": "so31",
+       "type": "upcoming_event",
+       "text": "",
+       "date": "2026-11-22",
+       "url": "https://www.spacesworks.com/en/us/san-jose",
+       "strength": 0.62
+      }
+     ],
+     "angle": "Su página dice que organiza eventos, talleres y reuniones sociales",
+     "roles": [
+      "Events coordinator",
+      "Executive director"
+     ]
+    },
+    {
+     "id": "o32",
+     "name": "Dance Boulevard",
+     "city": "San José",
+     "region": "Bay Area, CA",
+     "inRegion": true,
+     "industry": "Escuela de baile latino",
+     "industryFit": 1.0,
+     "size": "Organization",
+     "domain": "https://danceboulevard.com/salsa-classes/",
+     "currentVendor": null,
+     "verification": "A",
+     "signals": [
+      {
+       "id": "so32",
+       "type": "upcoming_event",
+       "text": "Práctica de salsa cada semana (día exacto sin verificar)",
+       "date": "2026-11-22",
+       "url": "https://danceboulevard.com/salsa-classes/",
+       "strength": 0.85
+      }
+     ],
+     "angle": "Clases de salsa y 'Salsa Practice Party'; público latino y aficionado a la salsa",
+     "roles": [
+      "Events coordinator",
+      "Executive director"
+     ]
+    },
+    {
+     "id": "o33",
+     "name": "Studio M Ballroom Club",
+     "city": "San José",
+     "region": "Bay Area, CA",
+     "inRegion": true,
+     "industry": "Escuela de baile latino y de salón",
+     "industryFit": 1.0,
+     "size": "Organization",
+     "domain": "https://www.studiomballroom.com/",
+     "currentVendor": null,
+     "verification": "A",
+     "signals": [
+      {
+       "id": "so33",
+       "type": "upcoming_event",
+       "text": "Bachata social los lunes (extracto); 3550 Stevens Creek Blvd",
+       "date": "2026-11-22",
+       "url": "https://www.studiomballroom.com/",
+       "strength": 0.85
+      }
+     ],
+     "angle": "Dice que alquila el estudio para eventos privados, incluidas galas de fiestas; socials de bachata",
+     "roles": [
+      "Events coordinator",
+      "Executive director"
+     ]
+    },
+    {
+     "id": "o34",
+     "name": "Mambonova Dance Co. (en Artista Dance School)",
+     "city": "Santa Clara",
+     "region": "Bay Area, CA",
+     "inRegion": true,
+     "industry": "Escuela de baile latino",
+     "industryFit": 1.0,
+     "size": "Organization",
+     "domain": "https://www.mambonova.net/",
+     "currentVendor": null,
+     "verification": "A",
+     "signals": [
+      {
+       "id": "so34",
+       "type": "upcoming_event",
+       "text": "Sin fechas verificadas",
+       "date": "2026-11-22",
+       "url": "https://www.mambonova.net/",
+       "strength": 0.85
+      }
+     ],
+     "angle": "Clases de salsa y bachata; comunidad latina de baile",
+     "roles": [
+      "Events coordinator",
+      "Executive director"
+     ]
+    },
+    {
+     "id": "o35",
+     "name": "San Jose Bachata Nights LLC",
+     "city": "San José",
+     "region": "Bay Area, CA",
+     "inRegion": true,
+     "industry": "Organizador de eventos de baile latino",
+     "industryFit": 1.0,
+     "size": "Organization",
+     "domain": "https://www.sanjosebachatanights.com/",
+     "currentVendor": null,
+     "verification": "B",
+     "signals": [
+      {
+       "id": "so35",
+       "type": "upcoming_event",
+       "text": "Sin fechas verificadas",
+       "date": "2026-11-22",
+       "url": "https://www.instagram.com/sanjosebachatanights/?hl=en",
+       "strength": 0.62
+      }
+     ],
+     "angle": "Organiza clases y eventos de bachata",
+     "roles": [
+      "Events coordinator",
+      "Executive director"
+     ]
+    },
+    {
+     "id": "o36",
+     "name": "City of San José: Parks, Recreation & Neighborhood Services (alquileres)",
+     "city": "San José",
+     "region": "Bay Area, CA",
+     "inRegion": true,
+     "industry": "Gobierno local: salones y centros comunitarios",
+     "industryFit": 0.7,
+     "size": "Organization",
+     "domain": "https://www.sanjoseca.gov/your-government/departments-offices/parks-recreation-neighborhood-services/rentals-and-events",
+     "currentVendor": null,
+     "verification": "A",
+     "signals": [
+      {
+       "id": "so36",
+       "type": "upcoming_event",
+       "text": "",
+       "date": "2026-11-22",
+       "url": "https://www.sanjoseca.gov/your-government/departments-offices/parks-recreation-neighborhood-services/rentals-and-events",
+       "strength": 0.85
+      }
+     ],
+     "angle": "Alquila salones, salas y espacios; quien reserva suele necesitar comida",
+     "roles": [
+      "Events coordinator",
+      "Executive director"
+     ]
+    },
+    {
+     "id": "o37",
+     "name": "Santa Clara Family Health Plan (evento ¡Viva la Cultura!)",
+     "city": "San José",
+     "region": "Bay Area, CA",
+     "inRegion": true,
+     "industry": "Organización de salud con eventos comunitarios",
+     "industryFit": 0.7,
+     "size": "Organization",
+     "domain": "https://www.facebook.com/scfhp/posts/join-santa-clara-family-health-plan-for-viva-la-cultura-a-free-community-celebra/1386046406354590/",
+     "currentVendor": null,
+     "verification": "B",
+     "signals": [
+      {
+       "id": "so37",
+       "type": "upcoming_event",
+       "text": "Fecha de esa edición sin verificar",
+       "date": "2026-11-22",
+       "url": "https://www.facebook.com/scfhp/posts/join-santa-clara-family-health-plan-for-viva-la-cultura-a-free-community-celebra/1386046406354590/",
+       "strength": 0.62
+      }
+     ],
+     "angle": "Organizó una celebración comunitaria gratuita de cultura afrolatina con comida, música y vendedores",
+     "roles": [
+      "Events coordinator",
+      "Executive director"
+     ]
+    }
+   ],
+   "marketSignals": [],
+   "homeRegion": "Bay Area, CA"
+  },
+  {
+   "id": "fe-solar",
+   "label": "Force Energy · Solar",
+   "product": {
+    "id": "fe-solar",
+    "name": "Force Energy · Solar + Storage (EPC turnkey)",
+    "intake": "Force Energy designs, installs and legalizes on-grid solar, off-grid and battery (BESS) systems in Santander, Colombia. 41 projects delivered, 528 kWp across 9 municipalities, including three off-grid Indigenous schools. Typical size 10 to 30 kVA, largest 70 kVA. Includes grid-operator filing, RETIE compliance, monitoring and O&M. Pre-sale quote in minutes through the FE Platform pre-quoter. Price reference about COP 3.6M per kWp, always preliminary until a site visit.",
+    "lines": [
+     "On-grid PV",
+     "Solar thermal",
+     "Off-grid / hybrid",
+     "BESS backup",
+     "EV charging"
+    ]
+   },
+   "icp": {
+    "productId": "fe-solar",
+    "inferredFrom": [
+     "intake text",
+     "FE Platform pre-quote form fields",
+     "Force Energy segment mix (anonymized)",
+     "public competitor pages"
+    ],
+    "fields": [
+     {
+      "key": "industries",
+      "label": "Target industries",
+      "value": [
+       "Commercial real estate (malls)",
+       "Agro-industrial (poultry, eggs)",
+       "Healthcare institutions",
+       "Hospitality",
+       "Education campuses"
+      ],
+      "naics": [
+       "531120",
+       "112320",
+       "622110",
+       "721110",
+       "611310"
+      ],
+      "confidence": 0.86,
+      "why": "Highest load factor and daytime consumption; Santander produces about 25% of national chicken and 23% of eggs with roughly 1,186 farms (Solar Fox)."
+     },
+     {
+      "key": "size",
+      "label": "Company size",
+      "value": "20 to 500 employees; electricity bill above about COP 8M per month; usable roof or land above 150 m²",
+      "confidence": 0.74,
+      "why": "Typical project 10 to 30 kVA fits this band; the 70 kVA record sets the upper edge."
+     },
+     {
+      "key": "personas",
+      "label": "Buyer personas",
+      "value": [
+       "General manager",
+       "Mall administrator",
+       "Facilities / maintenance director",
+       "Sustainability lead",
+       "CFO for financing"
+      ],
+      "confidence": 0.81,
+      "why": "EPC buyers sign after a technical and a financial review."
+     },
+     {
+      "key": "triggers",
+      "label": "Trigger events",
+      "value": [
+       "Announced solar or efficiency program",
+       "New plant or expansion",
+       "Competitor system installed nearby",
+       "Tariff or financing announcements",
+       "Energy audit or thesis published about the site"
+      ],
+      "confidence": 0.78,
+      "why": "Each trigger is observable in public sources and ties to a buying window."
+     },
+     {
+      "key": "geo",
+      "label": "Geography",
+      "value": "Santander first (Bucaramanga metro), then Colombia",
+      "confidence": 0.9,
+      "why": "Force Energy operates here; the grid operator filing is local."
+     },
+     {
+      "key": "negatives",
+      "label": "Negative signals",
+      "value": [
+       "Leased premises with no roof rights",
+       "Outside Colombia",
+       "Hiring freeze or insolvency notice",
+       "Already signed a turnkey contract this year"
+      ],
+      "confidence": 0.7,
+      "why": "Cuts wasted outreach."
+     }
+    ],
+    "expansion": [
+     {
+      "id": "x1",
+      "segment": "Companies that already installed solar and now need storage and monitoring",
+      "evidence": "Malls announcing solar systems (Acrópolis, La Quinta, La Florida) are one step from peak shaving and O&M.",
+      "confidence": 0.77,
+      "status": "suggested"
+     },
+     {
+      "id": "x2",
+      "segment": "Health campuses with efficiency programs",
+      "evidence": "A Foscal energy-efficiency program thesis (UDES 2024) and the new health free-trade zone with UNAB show planned load growth.",
+      "confidence": 0.69,
+      "status": "suggested"
+     },
+     {
+      "id": "x3",
+      "segment": "Poultry integrators with many small farms",
+      "evidence": "One sector body sees record 2025 output; farms are a repeatable roof-mount pattern.",
+      "confidence": 0.72,
+      "status": "suggested"
+     }
+    ]
+   },
+   "competitors": [
+    {
+     "id": "k1",
+     "name": "SolarISAG",
+     "type": "direct",
+     "url": "https://solarisag.com.co/",
+     "positioning": "Designs, installs and legalizes systems in Bucaramanga, Floridablanca, Girón and Piedecuesta; asks for the energy bill to size.",
+     "pricing": "Not public"
+    },
+    {
+     "id": "k2",
+     "name": "Solar Fox",
+     "type": "direct",
+     "url": "https://solarfox.com.co/paneles-solares-para-granjas-avicolas/",
+     "positioning": "Content-led for poultry farms and hotels with Santander market figures.",
+     "pricing": "Not public"
+    },
+    {
+     "id": "k3",
+     "name": "ESSA (grid operator)",
+     "type": "alternative",
+     "url": "https://www.essa.com.co/site/clientes/pagina-detalle/tenemos-una-solucion-solar-para-empresas-y-hogares",
+     "positioning": "Solar solution for companies and homes financed in up to 120 installments through the operator.",
+     "pricing": "Financing up to 120 installments"
+    },
+    {
+     "id": "k4",
+     "name": "Colgas",
+     "type": "direct",
+     "url": "https://www.facebook.com/ColgasCol/videos/%EF%B8%8F%EF%B8%8Fen-colgas-creemos-en-la-innovaci%C3%B3n-que-transforma-ciudades%EF%B8%8F-por-eso-acompa%C3%B1amo/609936021992643/",
+     "positioning": "Built a solar system at Centro Comercial La Quinta, Bucaramanga.",
+     "pricing": "Not public"
+    },
+    {
+     "id": "k5",
+     "name": "Electrorueda",
+     "type": "indirect",
+     "url": "https://electrorueda.com/paneles-solares-en-bucaramanga-todo-lo-que-necesitas-saber/",
+     "positioning": "Retail panels and installs; publishes price ranges.",
+     "pricing": "Commercial 500 W panel COP 1.5M to 2.5M; industrial systems from COP 10M"
+    },
+    {
+     "id": "k6",
+     "name": "Terrall",
+     "type": "direct",
+     "url": "https://terrallsolnet.com/energia-solar-para-la-industria-avicola/",
+     "positioning": "Solar for the poultry industry in Colombia.",
+     "pricing": "Not public"
+    },
+    {
+     "id": "k7",
+     "name": "Celsia",
+     "type": "direct",
+     "url": "https://www.facebook.com/celsia.energia/posts/cada-d%C3%ADa-m%C3%A1s-fan%C3%A1ticos-se-unen-a-la-revoluci%C3%B3n-de-la-energ%C3%ADa-solar-estamos-felic/688473203304486/",
+     "positioning": "Large utility brand; example of 62 panels and 33.79 kWp with savings above 50%.",
+     "pricing": "Not public"
+    }
+   ],
+   "accounts": [
+    {
+     "id": "a1",
+     "name": "Centro Comercial Acrópolis",
+     "city": "Bucaramanga",
+     "region": "Santander",
+     "industry": "Commercial real estate",
+     "size": "Large retail center",
+     "domain": null,
+     "currentVendor": null,
+     "signals": [
+      {
+       "id": "s1",
+       "type": "announced_solar",
+       "text": "Announced it started implementing solar panels in the mall.",
+       "date": "2025",
+       "url": "https://www.instagram.com/reel/DIw06aIBchu/",
+       "strength": 0.85,
+       "textEs": "Anunció que comenzó a instalar paneles solares en el centro comercial."
+      }
+     ],
+     "angle": "Storage for peak shaving and a monitoring and O&M plan for the system they are installing.",
+     "roles": [
+      "Mall administrator",
+      "Facilities / maintenance director"
+     ],
+     "inRegion": true,
+     "industryFit": 1.0,
+     "angleEs": "Almacenamiento para reducir picos de demanda y un plan de monitoreo y mantenimiento del sistema que están instalando."
+    },
+    {
+     "id": "a2",
+     "name": "Centro Comercial La Quinta",
+     "city": "Bucaramanga",
+     "region": "Santander",
+     "industry": "Commercial real estate",
+     "size": "Retail center",
+     "domain": null,
+     "currentVendor": "Colgas",
+     "signals": [
+      {
+       "id": "s2",
+       "type": "competitor_installed",
+       "text": "Colgas built a solar system at the center.",
+       "date": "2025",
+       "url": "https://www.facebook.com/ColgasCol/videos/%EF%B8%8F%EF%B8%8Fen-colgas-creemos-en-la-innovaci%C3%B3n-que-transforma-ciudades%EF%B8%8F-por-eso-acompa%C3%B1amo/609936021992643/",
+       "strength": 0.8,
+       "textEs": "Colgas construyó un sistema solar en el centro comercial."
+      }
+     ],
+     "angle": "Independent O&M and a second-phase expansion with storage; do not attack the incumbent.",
+     "roles": [
+      "Mall administrator",
+      "Facilities / maintenance director"
+     ],
+     "inRegion": true,
+     "industryFit": 1.0,
+     "angleEs": "Mantenimiento independiente y una segunda fase con almacenamiento, sin atacar al proveedor actual."
+    },
+    {
+     "id": "a3",
+     "name": "Fundación Oftalmológica de Santander (FOSCAL)",
+     "city": "Floridablanca",
+     "region": "Santander",
+     "industry": "Healthcare",
+     "size": "Large hospital system",
+     "domain": null,
+     "currentVendor": null,
+     "signals": [
+      {
+       "id": "s3",
+       "type": "efficiency_program",
+       "text": "A 2024 UDES thesis formulates an efficient energy use program for Clínica Foscal.",
+       "date": "2024",
+       "url": "https://repositorio.udes.edu.co/entities/publication/ae91f8fd-65a1-4b5a-ab24-84f4999ede52",
+       "strength": 0.7,
+       "textEs": "Una tesis de la UDES (2024) formula un programa de uso eficiente de energía para la Clínica Foscal."
+      },
+      {
+       "id": "s4",
+       "type": "expansion",
+       "text": "Foscal and UNAB created the first health free-trade zone in Santander.",
+       "date": "2025",
+       "url": "https://unab.edu.co/nace-primera-zona-franca-de-salud-en-santander/",
+       "strength": 0.65,
+       "textEs": "Foscal y la UNAB crearon la primera zona franca de salud de Santander."
+      }
+     ],
+     "angle": "Hospital load is steady all day, so solar plus backup storage reduces cost and adds resilience for critical areas.",
+     "roles": [
+      "General manager",
+      "Facilities / maintenance director",
+      "Sustainability lead"
+     ],
+     "inRegion": true,
+     "industryFit": 1.0,
+     "angleEs": "La carga de un hospital es constante todo el día; solar más respaldo con baterías reduce costos y da resiliencia a las áreas críticas."
+    },
+    {
+     "id": "a4",
+     "name": "Don Pollo · Granja La Porcelana",
+     "city": "Colombia (to verify)",
+     "region": "To verify",
+     "industry": "Agro-industrial (poultry)",
+     "size": "Integrated poultry producer",
+     "domain": null,
+     "currentVendor": null,
+     "signals": [
+      {
+       "id": "s5",
+       "type": "announced_solar",
+       "text": "Posted that the future of energy has started at Don Pollo with Granja La Porcelana turning to solar.",
+       "date": "2025",
+       "url": "https://www.facebook.com/DonPolloColombia/videos/el-futuro-de-la-energ%C3%ADa-ya-comenz%C3%B3-en-don-pollo-la-granja-la-porcelana-se-convie/1671737587467740/",
+       "strength": 0.75,
+       "textEs": "Publicó que el futuro de la energía ya comenzó en Don Pollo con la Granja La Porcelana pasando a energía solar."
+      }
+     ],
+     "angle": "Replicate the first farm across its other farms with a standard roof-mount design.",
+     "roles": [
+      "General manager",
+      "Farm operations manager"
+     ],
+     "inRegion": false,
+     "industryFit": 1.0,
+     "angleEs": "Replicar la primera granja en las demás con un diseño estándar sobre cubierta."
+    },
+    {
+     "id": "a5",
+     "name": "Centro Comercial La Florida",
+     "city": "Pereira",
+     "region": "Risaralda",
+     "industry": "Commercial real estate",
+     "size": "Retail center",
+     "domain": null,
+     "currentVendor": null,
+     "signals": [
+      {
+       "id": "s6",
+       "type": "clean_energy_share",
+       "text": "Reported moving from 31% to 59% clean energy for the whole center.",
+       "date": "2025",
+       "url": "https://www.facebook.com/LaFloridaCentroComercial/videos/en-la-florida-pasamos-de-cubrir-el-31-al-59-de-energ%C3%ADa-limpia-para-toda-nuestra-/1597440711958610/",
+       "strength": 0.7,
+       "textEs": "Reportó pasar de cubrir 31 % a 59 % de energía limpia en todo el centro."
+      }
+     ],
+     "angle": "Out of Santander: benchmark only until the engine expands beyond the home region.",
+     "roles": [
+      "Mall administrator"
+     ],
+     "inRegion": false,
+     "industryFit": 1.0,
+     "angleEs": "Fuera de Santander: solo referencia."
+    },
+    {
+     "id": "a6",
+     "name": "HOMI Hospital Pediátrico",
+     "city": "Bogotá",
+     "region": "Bogotá",
+     "industry": "Healthcare",
+     "size": "Hospital",
+     "domain": null,
+     "currentVendor": null,
+     "signals": [
+      {
+       "id": "s7",
+       "type": "announced_solar",
+       "text": "Inaugurated what it calls the largest solar energy project in the health sector in Colombia.",
+       "date": "2025",
+       "url": "https://www.facebook.com/HOMIOficial/posts/hoy-inauguramos-el-proyecto-de-energ%C3%ADa-solar-m%C3%A1s-grande-del-sector-salud-en-colo/875692871781727/",
+       "strength": 0.6,
+       "textEs": "Inauguró el que llama el proyecto de energía solar más grande del sector salud en Colombia."
+      }
+     ],
+     "angle": "Out of region: used as a reference case for the Foscal conversation.",
+     "roles": [
+      "General manager"
+     ],
+     "inRegion": false,
+     "industryFit": 1.0,
+     "angleEs": "Fuera de región: caso de referencia para Foscal."
+    }
+   ],
+   "marketSignals": [
+    {
+     "id": "m1",
+     "text": "Santander supplies about 25% of national chicken and 23% of eggs with roughly 1,186 farms.",
+     "url": "https://solarfox.com.co/paneles-solares-para-granjas-avicolas/"
+    },
+    {
+     "id": "m2",
+     "text": "Colombia reached a record 3.167 million tons of poultry protein in 2025 according to the sector body.",
+     "url": "https://www.facebook.com/Nelsonjalopez/posts/-el-sector-av%C3%ADcola-de-santander-tiene-mucho-que-aportar-al-desarrollo-de-nuestra/122150059737169777/"
+    },
+    {
+     "id": "m3",
+     "text": "A solar cluster of three large plants in Santander was announced on 21 October 2026.",
+     "url": "https://www.instagram.com/p/DdZ8BKhkYQX/"
+    }
+   ],
+   "homeRegion": "Santander"
+  }
+ ],
+ "agents": [
+  {
+   "id": "planner",
+   "name": "Planner",
+   "ecosystemAgent": "Strategic Consultant",
+   "duty": "Parses the intake, defines GTM milestones, allocates work"
+  },
+  {
+   "id": "builder",
+   "name": "Builder",
+   "ecosystemAgent": "Virtual Engineer + Platform CTO",
+   "duty": "Runs discovery, graph writes and outreach drafting"
+  },
+  {
+   "id": "reviewer",
+   "name": "Reviewer",
+   "ecosystemAgent": "Legal + Quality",
+   "duty": "Checks every claim against a source and the copy against policy"
+  },
+  {
+   "id": "security",
+   "name": "Security",
+   "ecosystemAgent": "Platform security",
+   "duty": "Scans links and data exposure before dispatch"
+  },
+  {
+   "id": "gateway",
+   "name": "Approval gateway",
+   "ecosystemAgent": "WhatsApp agent + Joussef",
+   "duty": "One daily numbered queue, nothing leaves without a human yes"
+  },
+  {
+   "id": "finance",
+   "name": "Metering",
+   "ecosystemAgent": "CFO agent",
+   "duty": "Counts usage and enforces credits"
+  }
+ ],
+ "variants": [
+  {
+   "id": "v1",
+   "name": "Signal-led",
+   "hypothesis": "Open with the public signal"
+  },
+  {
+   "id": "v2",
+   "name": "Savings-led",
+   "hypothesis": "Open with the cost saving"
+  }
+ ]
+}
