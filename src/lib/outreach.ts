@@ -28,8 +28,8 @@ export function makeDrafts(ws: Workspace, a: Account, lead: Lead): Draft[] {
     const ig = a.instagram && !a.instagram.includes("no listado");
     const ch: Draft["channel"] = ig ? "instagram" : "email";
     const t1 = v === "v1"
-      ? `Hola, soy del equipo de Tinto Digital, en San José. ${seen} Ayudamos a restaurantes independientes con una tarjeta de puntos que vive en el Wallet del celular, sin app, y un asistente de WhatsApp que responde y guarda los contactos de quienes aceptan. ¿Le muestro cómo se vería la tarjeta de ${a.name}? ${OPT_OUT_ES}`
-      : `Hola, soy del equipo de Tinto Digital, en San José. Trabajamos con un restaurante de arepas del área en una tarjeta de puntos dentro del Wallet del celular y un asistente de WhatsApp. ¿Le muestro un ejemplo de dos minutos para ${a.name}? ${OPT_OUT_ES}`;
+      ? `Hola, soy del equipo de Tinto Digital, en San José. ${seen} Ayudamos a restaurantes independientes con una tarjeta de puntos que vive en el Wallet del celular, sin app, y un asistente de WhatsApp que responde y guarda los contactos de quienes aceptan. Le muestro cómo se vería la tarjeta de ${a.name}? ${OPT_OUT_ES}`
+      : `Hola, soy del equipo de Tinto Digital, en San José. Trabajamos con un restaurante de arepas del área en una tarjeta de puntos dentro del Wallet del celular y un asistente de WhatsApp. Le muestro un ejemplo de dos minutos para ${a.name}? ${OPT_OUT_ES}`;
     const e1 = v === "v1"
       ? `Hi, we are the Tinto Digital team in San José. ${seenEn} We help independent restaurants with a points card inside the phone wallet, no app, and a WhatsApp assistant that answers and keeps contacts of people who opt in. Can we show you what the card for ${a.name} would look like? ${OPT_OUT_EN}`
       : `Hi, we are the Tinto Digital team in San José. We are working with an arepa restaurant nearby on a points card in the phone wallet and a WhatsApp assistant. Can we show you a two-minute example for ${a.name}? ${OPT_OUT_EN}`;
@@ -41,8 +41,8 @@ export function makeDrafts(ws: Workspace, a: Account, lead: Lead): Draft[] {
   }
   if (ws.id === "tinto-catering") {
     const t1 = v === "v1"
-      ? `Hola equipo de ${a.name}. ${seen} Una cocina colombiana de San José prepara bandejas combo para eventos de 30 a 300 personas. ¿Quién coordina la comida de sus eventos y le puedo enviar un catálogo corto? ${OPT_OUT_ES}`
-      : `Hola equipo de ${a.name}. Una cocina colombiana de San José prepara bandejas combo para eventos de comunidad. ¿Les sirve que les envíe un catálogo corto para sus próximos eventos? ${OPT_OUT_ES}`;
+      ? `Hola equipo de ${a.name}. ${seen} Una cocina colombiana de San José prepara bandejas combo para eventos de 30 a 300 personas. Quién coordina la comida de sus eventos y le puedo enviar un catálogo corto? ${OPT_OUT_ES}`
+      : `Hola equipo de ${a.name}. Una cocina colombiana de San José prepara bandejas combo para eventos de comunidad. Les sirve que les envíe un catálogo corto para sus próximos eventos? ${OPT_OUT_ES}`;
     const e1 = v === "v1"
       ? `Hello ${a.name} team. ${seenEn} A Colombian kitchen in San José prepares combo trays for events of 30 to 300 people. Who coordinates food for your events, and may I send a short catalog? ${OPT_OUT_EN}`
       : `Hello ${a.name} team. A Colombian kitchen in San José prepares combo trays for community events. May I send a short catalog for your upcoming events? ${OPT_OUT_EN}`;
@@ -53,8 +53,8 @@ export function makeDrafts(ws: Workspace, a: Account, lead: Lead): Draft[] {
   }
   // Force Energy
   const t1 = v === "v1"
-    ? `Buenos días. ${seen} Force Energy diseña, instala y legaliza sistemas solares y de almacenamiento en Santander, con 41 proyectos entregados y 528 kWp. ${angleEs} ¿Podemos conversar con quien lleve el área técnica o de mantenimiento de ${a.name}? ${OPT_OUT_ES}`
-    : `Buenos días. Con la factura de energía de ${a.name} podemos darle un dimensionamiento preliminar, sujeto a visita técnica. Force Energy ha entregado 41 proyectos y 528 kWp en Santander. ¿Le enviamos el formulario? ${OPT_OUT_ES}`;
+    ? `Buenos días. ${seen} Force Energy diseña, instala y legaliza sistemas solares y de almacenamiento en Santander, con 41 proyectos entregados y 528 kWp. ${angleEs} Podemos conversar con quien lleve el área técnica o de mantenimiento de ${a.name}? ${OPT_OUT_ES}`
+    : `Buenos días. Con la factura de energía de ${a.name} podemos darle un dimensionamiento preliminar, sujeto a visita técnica. Force Energy ha entregado 41 proyectos y 528 kWp en Santander. Le enviamos el formulario? ${OPT_OUT_ES}`;
   const e1 = v === "v1"
     ? `Good morning. ${seenEn} Force Energy designs, installs and files solar and storage systems in Santander, with 41 projects delivered and 528 kWp. Could we speak with whoever runs technical or maintenance at ${a.name}? ${OPT_OUT_EN}`
     : `Good morning. With ${a.name}'s energy bill we can give a preliminary sizing, subject to a site visit. Force Energy has delivered 41 projects and 528 kWp in Santander. Shall we send the form? ${OPT_OUT_EN}`;
