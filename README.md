@@ -14,7 +14,7 @@ npm install
 npm run dev     # http://localhost:3100
 ```
 
-Open **Intake** → *Run pipeline*. Switch workspace in the left bar (Force Energy solar in Santander, Colombia; Tinto Digital restaurants and catering in the Bay Area).
+Open **Intake** → *Run pipeline*. The demo customer is Force Energy (solar and storage in Santander, Colombia). The engine is workspace-based: adding a company means adding one entry to `data/seed.json`.
 
 ## What is new today and what already existed
 
@@ -23,7 +23,7 @@ Open **Intake** → *Run pipeline*. Switch workspace in the left bar (Force Ener
 | The engine: intake, ICP, discovery, scoring, Kùzu graph, outreach, reviewer and security checks, approval queue, pipeline and analytics, metering | A team of AI agents with human approval gates, a strategic map, a weekly committee |
 | File contract with the WhatsApp agent (approval queue out, decisions in) | The WhatsApp agent (daily numbered approval queue) |
 | Flexprice-style event metering and credit gating | A production platform (CRM with stages, consultant network, audit log) |
-| Seed evidence for three workspaces from public sources | Prospect research done earlier for the Tinto Digital pilot (public business information only) |
+| Seed evidence for the Force Energy workspace from public sources | A solar and storage company (41 projects, 528 kWp) that is the real customer |
 
 ## Honest limits
 

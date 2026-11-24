@@ -24,33 +24,6 @@ export function makeDrafts(ws: Workspace, a: Account, lead: Lead): Draft[] {
   const angleEs = a.angleEs ?? a.angle;
   const seenEn = `What I saw publicly (${ev.host}): "${ev.text}".`;
 
-  if (ws.id === "tinto-wallet") {
-    const ig = a.instagram && !a.instagram.includes("no listado");
-    const ch: Draft["channel"] = ig ? "instagram" : "email";
-    const t1 = v === "v1"
-      ? `Hola, soy del equipo de Tinto Digital, en San José. ${seen} Ayudamos a restaurantes independientes con una tarjeta de puntos que vive en el Wallet del celular, sin app, y un asistente de WhatsApp que responde y guarda los contactos de quienes aceptan. Le muestro cómo se vería la tarjeta de ${a.name}? ${OPT_OUT_ES}`
-      : `Hola, soy del equipo de Tinto Digital, en San José. Trabajamos con un restaurante de arepas del área en una tarjeta de puntos dentro del Wallet del celular y un asistente de WhatsApp. Le muestro un ejemplo de dos minutos para ${a.name}? ${OPT_OUT_ES}`;
-    const e1 = v === "v1"
-      ? `Hi, we are the Tinto Digital team in San José. ${seenEn} We help independent restaurants with a points card inside the phone wallet, no app, and a WhatsApp assistant that answers and keeps contacts of people who opt in. Can we show you what the card for ${a.name} would look like? ${OPT_OUT_EN}`
-      : `Hi, we are the Tinto Digital team in San José. We are working with an arepa restaurant nearby on a points card in the phone wallet and a WhatsApp assistant. Can we show you a two-minute example for ${a.name}? ${OPT_OUT_EN}`;
-    return [
-      base(1, ch, t1, e1, ch === "email" ? `Tarjeta de puntos para ${a.name}` : undefined),
-      base(2, "email", `Hola, retomo mi mensaje sobre una tarjeta de puntos en el Wallet para ${a.name}. Si le interesa, puedo enviarle una maqueta con su nombre y colores. ${OPT_OUT_ES}`, `Hi, following up on my note about a wallet points card for ${a.name}. If you are interested I can send a mock-up with your name and colors. ${OPT_OUT_EN}`, `Re: tarjeta de puntos para ${a.name}`),
-      base(3, ch, `Último mensaje de mi parte: si más adelante quiere ver la tarjeta de ${a.name}, aquí estamos. ${OPT_OUT_ES}`, `Last note from me: if you want to see the card for ${a.name} later, we are here. ${OPT_OUT_EN}`),
-    ];
-  }
-  if (ws.id === "tinto-catering") {
-    const t1 = v === "v1"
-      ? `Hola equipo de ${a.name}. ${seen} Una cocina colombiana de San José prepara bandejas combo para eventos de 30 a 300 personas. Quién coordina la comida de sus eventos y le puedo enviar un catálogo corto? ${OPT_OUT_ES}`
-      : `Hola equipo de ${a.name}. Una cocina colombiana de San José prepara bandejas combo para eventos de comunidad. Les sirve que les envíe un catálogo corto para sus próximos eventos? ${OPT_OUT_ES}`;
-    const e1 = v === "v1"
-      ? `Hello ${a.name} team. ${seenEn} A Colombian kitchen in San José prepares combo trays for events of 30 to 300 people. Who coordinates food for your events, and may I send a short catalog? ${OPT_OUT_EN}`
-      : `Hello ${a.name} team. A Colombian kitchen in San José prepares combo trays for community events. May I send a short catalog for your upcoming events? ${OPT_OUT_EN}`;
-    return [
-      base(1, "email", t1, e1, `Catering de comida colombiana para ${a.name}`),
-      base(2, "email", `Retomo mi mensaje sobre el catálogo de bandejas para ${a.name}. Puedo enviarlo en español o inglés. ${OPT_OUT_ES}`, `Following up on the tray catalog for ${a.name}. I can send it in Spanish or English. ${OPT_OUT_EN}`, `Re: catering para ${a.name}`),
-    ];
-  }
   // Force Energy
   const t1 = v === "v1"
     ? `Buenos días. ${seen} Force Energy diseña, instala y legaliza sistemas solares y de almacenamiento en Santander, con 41 proyectos entregados y 528 kWp. ${angleEs} Podemos conversar con quien lleve el área técnica o de mantenimiento de ${a.name}? ${OPT_OUT_ES}`
@@ -86,7 +59,7 @@ export function review(d: Draft, a: Account, ws: Workspace, allowedHosts: string
   if (/[\w.+-]+@[\w-]+\.[\w.]+|\+?\d[\d\s().-]{8,}\d/.test(text)) { security = "flag"; notes.push("Personal contact data in body"); }
   if (/(sk-[A-Za-z0-9]{10,}|api[_-]?key|password|contraseña)/i.test(text)) { security = "flag"; notes.push("Possible secret in body"); }
   if (!/(responda «no»|reply "no")/i.test(text)) { security = "flag"; notes.push("Missing opt-out line (CAN-SPAM / Ley 1581)"); }
-  if (/(claude|anthropic|chatgpt|openai)/i.test(text)) { security = "flag"; notes.push("Names a specific AI tool; offers are sold as custom software"); }
+  if (/(claude|anthropic|chatgpt|openai)/i.test(text)) { security = "flag"; notes.push("Names a specific AI tool"); }
   const max = d.channel === "email" ? 900 : 700;
   if (text.length > max) { facts = "flag"; notes.push(`Too long for ${d.channel} (${text.length} characters)`); }
   return { facts, security, notes };

@@ -49,7 +49,7 @@ export async function runPipeline(s: State, wsId: string) {
   say(s, wsId, "Builder", "action", `Enrichment attempted for ${enriched} accounts. Without a provider key the status stays "skipped" and no address is invented.`);
 
   // Outreach drafts
-  const hosts = new Set<string>(["tintodigital.co", "forceenergy.online"]);
+  const hosts = new Set<string>(["forceenergy.online"]);
   for (const a of ws.accounts) for (const sg of a.signals) { try { hosts.add(new URL(sg.url).hostname.replace(/^www\./, "")); } catch {} }
   let drafted = 0, flagged = 0;
   for (const l of mine.filter((x) => x.tier !== "C")) {

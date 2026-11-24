@@ -52,7 +52,7 @@ Events: `icp_inferred`, `lead_discovered`, `lead_enriched`, `outreach_drafted`, 
 
 ## 7. Workspaces
 
-The same engine runs three workspaces: Force Energy (solar and storage, Santander), Tinto Digital restaurants (wallet loyalty card) and Tinto Digital catering (dated events). Adding a company means adding a workspace entry: product intake, ICP, competitors and accounts.
+The engine is workspace-based. The demo workspace is Force Energy (solar and storage, Santander). Adding a company means adding an entry with product intake, ICP, competitors and accounts to `data/seed.json`.
 
 ## 8. Known gaps
 

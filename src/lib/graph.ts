@@ -61,7 +61,7 @@ export async function buildGraph(s: State, wsId: string) {
   }
   // Network edges added by humans (for example a contact who previously worked at a prospect)
   await q("CREATE (:Person{id:'me', name:'Founder (you)', role:'Founder', verified:true})");
-  await q("CREATE (:Company{id:'home', name:'Tinto / Najm ecosystem', industry:'agency', region:'-', tier:'-', score:0})");
+  await q("CREATE (:Company{id:'home', name:'Force Energy', industry:'agency', region:'-', tier:'-', score:0})");
   await q("MATCH (p:Person{id:'me'}), (c:Company{id:'home'}) CREATE (p)-[:WORKS_AT]->(c)");
   let n = 0;
   for (const e of s.extraEdges.filter((x) => x.ws === wsId)) {
