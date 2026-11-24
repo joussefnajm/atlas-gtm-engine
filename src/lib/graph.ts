@@ -5,27 +5,34 @@ import type { State } from "./types";
 /** Builds an in-memory Kùzu property graph for one workspace from the current state and runs Cypher against it. */
 export async function buildGraph(s: State, wsId: string) {
   const ws = wsById(wsId);
-  const db = new kuzu.Database(":memory:");
-  const c = new kuzu.Connection(db);
+  // One embedded database per process, reused for every request: creating and destroying databases
+  // repeatedly crashes the native addon. We wipe the data and rebuild it from state each time.
+  const G: any = globalThis as any;
+  const fresh = !G.__kuzu;
+  if (fresh) { const db = new kuzu.Database(":memory:"); G.__kuzu = { db, c: new kuzu.Connection(db) }; }
+  const { db, c } = G.__kuzu;
   const q = async (cy: string) => { const r: any = await c.query(cy); return r; };
+  if (!fresh) await q("MATCH (n) DETACH DELETE n");
   const esc = (x: string) => String(x ?? "").replace(/\\/g, "\\\\").replace(/'/g, "\\'");
 
-  await q("CREATE NODE TABLE Company(id STRING, name STRING, industry STRING, region STRING, tier STRING, score INT64, PRIMARY KEY(id))");
-  await q("CREATE NODE TABLE Person(id STRING, name STRING, role STRING, verified BOOLEAN, PRIMARY KEY(id))");
-  await q("CREATE NODE TABLE Product(id STRING, name STRING, PRIMARY KEY(id))");
-  await q("CREATE NODE TABLE Competitor(id STRING, name STRING, kind STRING, PRIMARY KEY(id))");
-  await q("CREATE NODE TABLE Signal(id STRING, type STRING, text STRING, url STRING, strength DOUBLE, PRIMARY KEY(id))");
-  await q("CREATE NODE TABLE Channel(id STRING, name STRING, PRIMARY KEY(id))");
-  await q("CREATE NODE TABLE Agent(id STRING, name STRING, duty STRING, PRIMARY KEY(id))");
-  await q("CREATE REL TABLE WORKS_AT(FROM Person TO Company)");
-  await q("CREATE REL TABLE PREVIOUSLY_EMPLOYED_AT(FROM Person TO Company, note STRING)");
-  await q("CREATE REL TABLE COMPETES_WITH(FROM Competitor TO Product)");
-  await q("CREATE REL TABLE MATCHED_TO(FROM Company TO Product, score INT64)");
-  await q("CREATE REL TABLE HAS_SIGNAL(FROM Company TO Signal)");
-  await q("CREATE REL TABLE USES_VENDOR(FROM Company TO Competitor)");
-  await q("CREATE REL TABLE CONTACTED_VIA(FROM Person TO Channel, at STRING)");
-  await q("CREATE REL TABLE REPLIED_TO(FROM Person TO Channel, at STRING)");
-  await q("CREATE REL TABLE OWNS(FROM Agent TO Product)");
+  if (fresh) {
+    await q("CREATE NODE TABLE Company(id STRING, name STRING, industry STRING, region STRING, tier STRING, score INT64, PRIMARY KEY(id))");
+    await q("CREATE NODE TABLE Person(id STRING, name STRING, role STRING, verified BOOLEAN, PRIMARY KEY(id))");
+    await q("CREATE NODE TABLE Product(id STRING, name STRING, PRIMARY KEY(id))");
+    await q("CREATE NODE TABLE Competitor(id STRING, name STRING, kind STRING, PRIMARY KEY(id))");
+    await q("CREATE NODE TABLE Signal(id STRING, type STRING, text STRING, url STRING, strength DOUBLE, PRIMARY KEY(id))");
+    await q("CREATE NODE TABLE Channel(id STRING, name STRING, PRIMARY KEY(id))");
+    await q("CREATE NODE TABLE Agent(id STRING, name STRING, duty STRING, PRIMARY KEY(id))");
+    await q("CREATE REL TABLE WORKS_AT(FROM Person TO Company)");
+    await q("CREATE REL TABLE PREVIOUSLY_EMPLOYED_AT(FROM Person TO Company, note STRING)");
+    await q("CREATE REL TABLE COMPETES_WITH(FROM Competitor TO Product)");
+    await q("CREATE REL TABLE MATCHED_TO(FROM Company TO Product, score INT64)");
+    await q("CREATE REL TABLE HAS_SIGNAL(FROM Company TO Signal)");
+    await q("CREATE REL TABLE USES_VENDOR(FROM Company TO Competitor)");
+    await q("CREATE REL TABLE CONTACTED_VIA(FROM Person TO Channel, at STRING)");
+    await q("CREATE REL TABLE REPLIED_TO(FROM Person TO Channel, at STRING)");
+    await q("CREATE REL TABLE OWNS(FROM Agent TO Product)");
+  }
 
   await q(`CREATE (:Product{id:'${esc(ws.product.id)}', name:'${esc(ws.product.name)}'})`);
   for (const k of ws.competitors) {
@@ -103,16 +110,31 @@ export const QUERIES: Record<string, { title: string; why: string; cypher: strin
   },
 };
 
-export async function runQuery(s: State, wsId: string, key: string) {
-  const g = await buildGraph(s, wsId);
-  const spec = QUERIES[key];
-  const r: any = await g.c.query(spec.cypher);
-  const rows = await r.getAll();
-  return { ...spec, rows };
+// The embedded engine is native code: build, query and close one graph at a time, never two in parallel.
+let chain: Promise<unknown> = Promise.resolve();
+function serial<T>(fn: () => Promise<T>): Promise<T> {
+  const next = chain.then(fn, fn);
+  chain = next.catch(() => undefined);
+  return next;
+}
+async function closeGraph(_g: { db: any; c: any }) { /* shared per process: nothing to close */ }
+
+export function runQuery(s: State, wsId: string, key: string) {
+  return serial(async () => {
+    const g = await buildGraph(s, wsId);
+    try {
+      const spec = QUERIES[key];
+      const r: any = await g.c.query(spec.cypher);
+      const rows = await r.getAll();
+      return { ...spec, rows };
+    } finally { await closeGraph(g); }
+  });
 }
 
-export async function graphSnapshot(s: State, wsId: string) {
+export function graphSnapshot(s: State, wsId: string) {
+  return serial(async () => {
   const g = await buildGraph(s, wsId);
+  try {
   const nodes: any[] = []; const edges: any[] = [];
   for (const [label, cols] of [["Company", "id, name, tier"], ["Competitor", "id, name, kind"], ["Product", "id, name"], ["Signal", "id, type"], ["Person", "id, role"], ["Channel", "id"], ["Agent", "id, name"]] as const) {
     const r: any = await g.c.query(`MATCH (n:${label}) RETURN ${cols.split(", ").map((x) => "n." + x).join(", ")}`);
@@ -123,4 +145,6 @@ export async function graphSnapshot(s: State, wsId: string) {
     for (const row of await r.getAll()) edges.push({ type: rel, from: row["a.id"], to: row["b.id"] });
   }
   return { nodes, edges };
+  } finally { await closeGraph(g); }
+  });
 }
